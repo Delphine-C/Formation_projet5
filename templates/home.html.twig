@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <section class="row">
+            <div class="col-xs-12 col-lg-6">
+                <div class="row">
+                    <h1>A Big Title</h1>
+                </div>
+                <div class="row">
+                    <h2>A Subtitle</h2>
+                </div>
+                <div class="row">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nimis multa. Honesta oratio,
+                        Socratica, Platonis etiam. Id enim volumus, id contendimus, ut officii fructus sit ipsum
+                        officium. Vidit Homerus probari fabulam non posse, si cantiunculis tantus irretitus vir
+                        teneretur; Et non ex maxima parte de tota iudicabis? Paulum, cum regem Persem captum adduceret,
+                        eodem flumine invectio? Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere.
+                        Duo Reges: constructio interrete. Neque solum ea communia, verum etiam paria esse dixerunt. </p>
+                    <p>Uterque enim summo bono fruitur, id est voluptate. Ab hoc autem quaedam non melius quam veteres,
+                        quaedam omnino relicta. Immo vero, inquit, ad beatissime vivendum parum est, ad beate vero
+                        satis. His enim rebus detractis negat se reperire in asotorum vita quod reprehendat. Qualem
+                        igitur hominem natura inchoavit? Sed eum qui audiebant, quoad poterant, defendebant sententiam
+                        suam. Restinguet citius, si ardentem acceperit. </p>
+                </div>
+                <div class="row">
+                    <a>
+                        <button>Button</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-6">
+                <img src="{{ asset('images/img.jpeg') }}">
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="row">
+                <h2>A Subtitle</h2>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-lg-4">
+                    <img src="{{ asset('images/img.jpeg') }} " height="200" width="200">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Tria
+                        genera bonorum; Et quidem, inquit, vehementer errat; Aliter homines, aliter philosophos loqui
+                        putas
+                        oportere? Vide, quaeso, rectumne sit. Duo Reges: constructio interrete. Traditur, inquit, ab
+                        Epicuro
+                        ratio neglegendi doloris. </p>
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                    <img src="{{ asset('images/img.jpeg') }}" height="200" width="200">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Tria
+                        genera bonorum; Et quidem, inquit, vehementer errat; Aliter homines, aliter philosophos loqui
+                        putas
+                        oportere? Vide, quaeso, rectumne sit. Duo Reges: constructio interrete. Traditur, inquit, ab
+                        Epicuro
+                        ratio neglegendi doloris. </p>
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                    <img src="{{ asset('images/img.jpeg') }}" height="200" width="200">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Tria
+                        genera bonorum; Et quidem, inquit, vehementer errat; Aliter homines, aliter philosophos loqui
+                        putas
+                        oportere? Vide, quaeso, rectumne sit. Duo Reges: constructio interrete. Traditur, inquit, ab
+                        Epicuro
+                        ratio neglegendi doloris. </p>
+                </div>
+            </div>
+            <div class="row">
+                <a href="#">
+                    <button>Button</button>
+                </a>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="row">
+                <h2>A Subtitle</h2>
+            </div>
+            <div class="row">
+                <!-- Caroussel
+                ================================================== -->
+                <div id="monCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicateurs -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#monCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#monCarousel" data-slide-to="1"></li>
+                    </ol>
+                    <!-- Diapositives -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{{ asset('images/img.jpeg') }}" alt="">
+                            <!--<div class="carousel-caption">
+                                <h3>Un design futuriste</h3>
+                            </div>-->
+                        </div>
+                        <div class="item">
+                            <img src="{{ asset('images/img.jpeg') }}" alt="">
+                            <!--<div class="carousel-caption">
+                                <h3>Des formes sublimes</h3>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <a href="#">
+                    <button>Button</button>
+                </a>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-xs-0 col-lg-6">
+                <img src="{{ asset('images/img.jpeg') }}" height="250" width="250">
+            </div>
+            <div class="col-xs-12 col-lg-6">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Incommoda autem et commoda-ita enim estmata et dustmata appello-communia esse voluerunt, paria noluerunt. Experiamur igitur, inquit, etsi habet haec Stoicorum ratio difficilius quiddam et obscurius. Et quidem, inquit, vehementer errat; Duo Reges: constructio interrete. An vero, inquit, quisquam potest probare, quod perceptfum, quod. Iis igitur est difficilius satis facere, qui se Latina scripta dicunt contemnere. Quorum sine causa fieri nihil putandum est. Alterum significari idem, ut si diceretur, officia media omnia aut pleraque servantem vivere. Nam his libris eum malo quam reliquo ornatu villae delectari. Hunc vos beatum; </p>
+            </div>
+            <div>
+                <a href="#"><button>Button</button></a>
+            </div>
+        </section>
+    </div>
+{% endblock %}

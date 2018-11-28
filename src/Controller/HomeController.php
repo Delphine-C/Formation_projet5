@@ -16,4 +16,8 @@ class HomeController extends Controller
     /**
      * @Route("/", name="home_page")
      */
+    public function getHomepageAction()
+    {
+        return $this->render("home.html.twig");
+    }
 }
