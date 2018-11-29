@@ -16,4 +16,8 @@ class CatalogController extends Controller
     /**
      * @Route("/catalogue",name="catalog_page")
      */
+    public function catalogue()
+    {
+        return $this->render('catalog.html.twig');
+    }
 }
