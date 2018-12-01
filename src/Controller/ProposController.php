@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Delphine_Corneil
- * Date: 21/11/2018
- * Time: 16:26
+ * User: Benoit
+ * Date: 01/12/2018
+ * Time: 19:20
  */
 
 namespace App\Controller;
@@ -11,13 +11,13 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ContactController extends Controller
+class ProposController extends Controller
 {
     /**
-     * @Route("/contact", name="contact_page")
+     * @Route("/propos",name="propos_page")
      */
     public function contact()
     {
-        return $this->render('contact.html.twig');
+        return $this->render('propos.html.twig');
     }
 }

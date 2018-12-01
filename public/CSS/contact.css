@@ -1,0 +1,19 @@
+contact.css.row
+{
+    margin-top: 50px;
+}
+
+.button_catalog_subtitle
+ {
+    padding-right:0;
+    padding-left:0;
+    margin-top: 50px;
+ }
+.button_catalog_bigtitle
+{
+    text-align: center;
+    padding-right:0;
+    padding-left:0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
