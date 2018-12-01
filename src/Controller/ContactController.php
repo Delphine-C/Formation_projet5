@@ -16,4 +16,8 @@ class ContactController extends Controller
     /**
      * @Route("/contact", name="contact_page")
      */
+    public function catalogue()
+    {
+        return $this->render('contact.html.twig');
+    }
 }
