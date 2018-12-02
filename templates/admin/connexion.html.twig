@@ -27,10 +27,22 @@
 		<div class="row">
 			<div class="col-md-4 login-sec">
 				<h2 class="text-center">Cocorico Digital</h2>
-				<div class="login-form text-center">
+				<div class="login-form">
+                    {{ form_start(form) }}
 					<div class="form-group">
-						{{ form(form) }}
+						<label class="text-uppercase">Login</label>
+                        {{ form_row(form.login) }}
 					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1" class="text-uppercase">Mot de passe</label>
+                        {{ form_row(form.password) }}
+					</div>
+
+
+					<div class="form-check">
+
+					</div>
+                    {{ form_end(form) }}
 				</div>
 			</div>
 			<div class="col-md-8 banner-sec">

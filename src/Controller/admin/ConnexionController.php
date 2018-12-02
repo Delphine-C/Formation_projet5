@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ConnexionController extends Controller
 {
     /**
-     * @Route("/connexion",name="connexion_page")
+     * @Route("/connexion",name="connexion")
      */
     public function connexion(Request $request)
     {

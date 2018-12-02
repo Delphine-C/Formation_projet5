@@ -3,11 +3,17 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity(
+ *     fields={"login"},
+ *     message="L'identifiant existe déjà"
+ * )
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -44,7 +50,7 @@ class User
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $roles;
+    private $account;
 
     public function getId(): ?int
     {
@@ -111,15 +117,32 @@ class User
         return $this;
     }
 
-    public function getRoles(): ?string
+    public function getAccount(): ?string
     {
-        return $this->roles;
+        return $this->account;
     }
 
-    public function setRoles(string $roles): self
+    public function setAccount(string $account): self
     {
-        $this->roles = $roles;
+        $this->account = $account;
 
         return $this;
+    }
+    public function getUsername()
+    {
+        return $this->login;
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
     }
 }

@@ -15,15 +15,17 @@ class ConnexionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('Login', TextType::class, array(
+            ->add('login', TextType::class, array(
                 'attr'=>array(
-                    'placeholder'=>'Login'
+                    'placeholder'=>'Login',
+                    'class'=>'form-control',
                 ),
-                'label'=>' '
+                'label'=>' ',
             ))
             ->add('password', PasswordType::class, array(
                 'attr' => array(
                     'placeholder' => 'Mot de passe',
+                    'class'=>'form-control'
                 ),
                 'label'=>' '
             ))
