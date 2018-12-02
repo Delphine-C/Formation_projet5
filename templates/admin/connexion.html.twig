@@ -27,23 +27,23 @@
 		<div class="row">
 			<div class="col-md-4 login-sec">
 				<h2 class="text-center">Cocorico Digital</h2>
-				<form class="login-form">
+				<div class="login-form">
+                    {{ form_start(form) }}
 					<div class="form-group">
-						<label for="exampleInputEmail1" class="text-uppercase">Login</label>
-						<input type="text" class="form-control" placeholder="">
-
+						<label class="text-uppercase">Login</label>
+                        {{ form_row(form.login) }}
 					</div>
 					<div class="form-group">
 						<label for="exampleInputPassword1" class="text-uppercase">Mot de passe</label>
-						<input type="password" class="form-control" placeholder="">
+                        {{ form_row(form.password) }}
 					</div>
 
 
 					<div class="form-check">
-						<button type="submit" class="btn btn-login float-right">Connexion</button>
-					</div>
 
-				</form>
+					</div>
+                    {{ form_end(form) }}
+				</div>
 			</div>
 			<div class="col-md-8 banner-sec">
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
