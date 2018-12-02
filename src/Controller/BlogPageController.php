@@ -16,4 +16,8 @@ class BlogPageController extends Controller
     /**
      * @Route("/blog",name="blog_page")
      */
+    public function blog()
+    {
+        return $this->render('blog.html.twig');
+    }
 }
