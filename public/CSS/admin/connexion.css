@@ -79,10 +79,10 @@
 }
 .banner-text
 {
-    width:70%;
+    width:100%;
     position:absolute;
-    bottom:40px;
-    padding-left:20px;
+    bottom:30px;
+    padding-left:200px;
 }
 .banner-text h2
 {
@@ -102,4 +102,7 @@
 .banner-text p
 {
     color:#fff;
+    font-size: large;
+    font-family: "Arial";
+    font-weight: bold;
 }
