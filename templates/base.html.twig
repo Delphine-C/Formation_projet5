@@ -8,7 +8,58 @@
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
+<header>
+    <!-- Nav -->
+    <div class="row">
+        <div class="col-lg-2">
+            <img src="#">
+        </div>
+        <div  class="col-lg-8">
+            <nav id="nav">
+                <ul>
+                    <li><a href="{{ path('home_page') }}">Accueil</a></li>
+                    <li><a href="{{ path('catalog_page') }}">Nos services</a></li>
+                    <li><a href="#">Nos clients</a></li>
+                    <li><a href="{{ path('propos_page') }}">A propos</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="{{ path('contact_page') }}">Nous contacter</a> </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="col-lg-2">
+            <p>logo</p>
+        </div>
+
+    </div>
+</header>
 {% block body %}{% endblock %}
+<footer>
+    <!-- Footer -->
+    <div class="row justify-content-around">
+        <div class="col-lg-3">
+            <ul>
+                <li>Address</li>
+                <li>Tel</li>
+                <li>Mel</li>
+            </ul>
+        </div>
+        <div class="col-lg-3">
+            <ul>
+                <li><a href="#">lien</a></li>
+                <li><a href="#">lien</a></li>
+                <li><a href="#">lien</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-3">
+            <p>logos</p>
+        </div>
+        <div class="row col-6 justify-content-around">
+            <p>Text &copy; Text</p>
+        </div>
+    </div>
+
+</footer>
 {% block javascripts %}{% endblock %}
 <script src="{{ asset('JS/bootstrap.js') }}"></script>
 </body>

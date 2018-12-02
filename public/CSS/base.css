@@ -1,0 +1,28 @@
+@media screen and (min-width: 1280px) {
+    nav {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul
+    {
+        list-style-type: none;
+    }
+
+    nav li
+    {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    nav a
+    {
+        padding-bottom: 3px;
+        text-decoration: none;
+        color: black;
+    }
+    nav a:hover
+    {
+        color: black;
+        text-decoration: none;
+    }
+}

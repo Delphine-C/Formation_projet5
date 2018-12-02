@@ -1,0 +1,41 @@
+div {
+    border: 1px solid;
+}
+
+button {
+    margin-top: 2em;
+}
+
+header {
+    margin-bottom: 10em;
+}
+
+img:not(.display-small) {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 500px) {
+    .display-small {
+        display: none;
+    }
+
+    header {
+        margin: auto
+    }
+
+    button, h2 {
+        margin-bottom: 1em;
+    }
+
+    header h2 {
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    h2 {
+        margin-bottom: 1.5em;
+    }
+}
