@@ -44,7 +44,7 @@ class User
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $account;
+    private $roles;
 
     public function getId(): ?int
     {
@@ -111,14 +111,14 @@ class User
         return $this;
     }
 
-    public function getAccount(): ?string
+    public function getRoles(): ?string
     {
-        return $this->account;
+        return $this->roles;
     }
 
-    public function setAccount(string $account): self
+    public function setRoles(string $roles): self
     {
-        $this->account = $account;
+        $this->roles = $roles;
 
         return $this;
     }
