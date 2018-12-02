@@ -14,12 +14,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ConnexionController extends Controller
+class LogoutController extends Controller
 {
     /**
      * @Route("/logout",name="logout")
      */
-    public function logout(Request $request)
+    public function logout()
     {
 
     }

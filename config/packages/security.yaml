@@ -25,6 +25,10 @@ security:
               check_path: connexion
               username_parameter: "connexion[login]"
               password_parameter: "connexion[password]"
+
+            logout:
+              path: logout
+              target: connexion
             # activate different ways to authenticate
             # http_basic: true
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
