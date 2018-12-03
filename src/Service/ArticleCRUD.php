@@ -22,7 +22,7 @@ class ArticleCRUD
     public function getArticles()
     {
         $articles = $this->em
-            ->getRepository('AppBundle:Article')
+            ->getRepository('App:Article')
             ->findAll();
 
         return $articles;
