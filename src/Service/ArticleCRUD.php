@@ -27,4 +27,13 @@ class ArticleCRUD
 
         return $articles;
     }
+
+    public function getArticle($id)
+    {
+        $article = $this->em
+            ->getRepository('App:Article')
+            ->findBy($id);
+
+        return $article;
+    }
 }
