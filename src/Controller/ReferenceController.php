@@ -16,4 +16,8 @@ class ReferenceController extends Controller
     /**
      * @Route("/references",name="reference_page")
      */
+    public function getReferencesAction()
+    {
+        return $this->render("references.html.twig");
+    }
 }
