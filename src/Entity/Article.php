@@ -20,7 +20,7 @@ class Article
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
-     * @Assert\Length(max=255,messageMax="Le titre ne peut pas contenir plus de 255 caractères.")
+     * @Assert\Length(max=255,maxMessage="Le titre ne peut pas contenir plus de 255 caractères.")
      */
     private $title;
 
