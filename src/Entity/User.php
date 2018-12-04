@@ -141,8 +141,11 @@ class User implements UserInterface
     {
         // TODO: Implement getSalt() method.
     }
-    public function getRoles()
+    public function getRoles(): array
     {
-        return ['ROLE_USER'];
+        // guarantee every user at least has ROLE_USER
+        $roles[] = $this->account;
+
+        return array_unique($roles);
     }
 }
