@@ -36,4 +36,10 @@ class ArticleCRUD
 
         return $article;
     }
+
+    public function saveArticle($article)
+    {
+        $this->em->persist($article);
+        $this->em->flush();
+    }
 }

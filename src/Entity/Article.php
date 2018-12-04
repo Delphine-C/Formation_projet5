@@ -36,6 +36,12 @@ class Article
      */
     private $created_date;
 
+    public function __construct()
+    {
+        $this->created_date=new \DateTime();
+        $this->author='Auteur';
+    }
+
     public function getId(): ?int
     {
         return $this->id;
