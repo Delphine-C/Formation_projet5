@@ -32,7 +32,7 @@ class ArticleCRUD
     {
         $article = $this->em
             ->getRepository('App:Article')
-            ->findBy($id);
+            ->find($id);
 
         return $article;
     }
