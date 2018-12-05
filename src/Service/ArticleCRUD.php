@@ -42,4 +42,14 @@ class ArticleCRUD
         $this->em->persist($article);
         $this->em->flush();
     }
+
+    public function deleteArticle($id)
+    {
+        $article = $this->em
+            ->getRepository('App:Article')
+            ->find($id);
+
+        $this->em->remove($article);
+        $this->em->flush();
+    }
 }
