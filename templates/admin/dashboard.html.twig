@@ -14,71 +14,79 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 col-lg-4">
-				<p>Bonjour <span class="font-weight-bold">{{ app.user.firstname }} {{ app.user.lastname }}</span></p>
+			<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 username">
+				<div class="col-md-4 col-lg-4">
+					<p>Bonjour, <span class="font-weight-bold">{{ app.user.firstname }} {{ app.user.lastname }}</span></p>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 container_own_article">
-				<div class="row">
-					<div class="col-md-10 col-lg-10">
-						<h3>Vos derniers articles :</h3>
-					</div>
+		<div class="row d-flex justify-content-center">
+			<div>
+				<img src="images/admin/icone_article.png" alt="Bootstrap" class="img-fluid img-responsive logo">
+			</div>
+			<div class="col-md-12 col-lg-12 text-center title">
+				<h3>Vos derniers articles :</h3>
+			</div>
+			<div class="row">
+				<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 container_own_article">
+                    {% for article in own_articles %}
+						<div class="row d-flex justify-content-between title_article">
+							<div class="col-md-2 col-lg-2">
+								<h5>{{ article.title }}</h5>
+							</div>
+							<div class="col-md-2 col-lg-2">
+								<p>Date</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-lg-12 content_article">
+								<p>{{ article.content|slice(0, 300) ~ '...'  }}</p>
+							</div>
+						</div>
+						<div class="row text-right">
+							<div class="col-md-12 col-lg-12 button">
+								<input type="button" value="Editer article" class="btn btn-secondary btn-lg">
+							</div>
+						</div>
+                    {% endfor %}
 				</div>
-                {% for article in own_articles %}
-					<div class="row d-flex justify-content-between">
-						<div class="col-md-2 col-lg-2">
-							<a href="#"><h5>{{ article.title }}</h5></a>
-						</div>
-						<div class="col-md-2 col-lg-2">
-							<p>Date</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 col-lg-12">
-							<a href="#"><p>{{ article.content|slice(0, 300) ~ '...'  }}</p></a>
-						</div>
-					</div>
-					<div class="row text-right">
-						<div class="col-md-12 col-lg-12">
-							<input type="button" value="Editer article" class="btn btn-secondary btn-lg">
-						</div>
-					</div>
-                {% endfor %}
 			</div>
 		</div>
-		<div class="row">
-			<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 container_other_article ">
-				<div class="row">
-					<div class="col-md-10 col-lg-10">
-						<h3>Les derniers articles publiés :</h3>
-					</div>
+		<div class="row d-flex justify-content-center">
+			<div>
+				<img src="images/admin/icone_article.png" alt="Bootstrap" class="img-fluid img-responsive logo">
+			</div>
+			<div class="col-md-12 col-lg-12 text-center title">
+				<h3>Les derniers articles publiés :</h3>
+			</div>
+			<div class="row">
+				<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 container_other_article ">
+                    {% for article in other_articles %}
+						<div class="row d-flex justify-content-between title_article">
+							<div class="col-md-2 col-lg-2">
+								<h5>{{ article.title }}</h5>
+							</div>
+							<div class="col-md-2 col-lg-2">
+								<p>Date</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-lg-12">
+								<p>{{ article.author }}</p>
+							</div>
+						</div>
+						<div class="row content_article">
+							<div class="col-md-12 col-lg-12">
+								<p>{{ article.content|slice(0, 300) ~ '...'  }}</p>
+							</div>
+						</div>
+						<div class="row text-right">
+							<div class="col-md-12 col-lg-12 button">
+								<input type="button" value="Lire article" class="btn btn-secondary btn-lg">
+							</div>
+						</div>
+                    {% endfor %}
 				</div>
-                {% for article in other_articles %}
-					<div class="row d-flex justify-content-between">
-						<div class="col-md-2 col-lg-2">
-							<a href="#"><h5>{{ article.title }}</h5></a>
-						</div>
-						<div class="col-md-2 col-lg-2">
-							<p>Date</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 col-lg-12">
-							<p>{{ article.author }}</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 col-lg-12">
-							<a href="#"><p>{{ article.content|slice(0, 300) ~ '...'  }}</p></a>
-						</div>
-					</div>
-					<div class="row text-right">
-						<div class="col-md-12 col-lg-12">
-							<input type="button" value="Lire article" class="btn btn-secondary btn-lg">
-						</div>
-					</div>
-                {% endfor %}
 			</div>
 		</div>
 	</div>
