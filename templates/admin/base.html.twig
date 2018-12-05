@@ -20,7 +20,7 @@
             <nav id="nav">
                 <ul>
                     <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Article</a></li>
+                    <li><a href="{{ path('articles') }}">Articles</a></li>
                     <li><a href="#">Compte</a></li>
                     {% if is_granted('ROLE_ADMIN') %}
                         <li><a href="#">Admin comptes</a></li>
