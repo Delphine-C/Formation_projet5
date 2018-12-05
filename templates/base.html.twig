@@ -10,21 +10,18 @@
 <body>
 <header>
     <!-- Nav -->
-    <div class="row">
-        <div class="col-lg-2">
-            <img src="#">
+    <div class="row" id="header-main">
+        <div class="col-lg-2" id="logo-nav">
+            <img src="{{ asset('images/logo_medium.png') }}" alt="Logo de cocorico agence digitale">
         </div>
-        <div  class="col-lg-8">
+        <div class="col-lg-8" id="div-nav">
             <nav id="nav">
-                <ul>
-                    <li><a href="{{ path('home_page') }}">Accueil</a></li>
-                    <li><a href="{{ path('catalog_page') }}">Nos services</a></li>
-                    <li><a href="{{ path('reference_page') }}">Nos clients</a></li>
-                    <li><a href="{{ path('propos_page') }}">A propos</a></li>
-                    <li><a href="{{ path('blog_page') }}">Blog</a></li>
-                    <li><a href="{{ path('contact_page') }}">Nous contacter</a> </li>
-                </ul>
-
+                <h5><a href="{{ path('home_page') }}">Accueil</a></h5>
+                <h5><a href="{{ path('catalog_page') }}">Nos services</a></h5>
+                <h5><a href="{{ path('reference_page') }}">Nos clients</a></h5>
+                <h5><a href="{{ path('blog_page') }}">Blog</a></h5>
+                <h5><a href="{{ path('propos_page') }}">A propos</a></h5>
+                <h5><a href="{{ path('contact_page') }}">Nous contacter</a></h5>
             </nav>
         </div>
         <div class="col-lg-2">
