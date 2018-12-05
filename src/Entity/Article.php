@@ -38,11 +38,11 @@ class Article
     /**
      * @ORM\Column(type="date")
      */
-    private $created_date;
+    private $date;
 
     public function __construct()
     {
-        $this->created_date=new \DateTime();
+        $this->date=new \DateTime();
         $this->author='Auteur';
     }
 
@@ -87,14 +87,14 @@ class Article
         return $this;
     }
 
-    public function getCreatedDate(): ?\DateTimeInterface
+    public function getDate(): ?\DateTimeInterface
     {
-        return $this->created_date;
+        return $this->date;
     }
 
-    public function setCreatedDate(\DateTimeInterface $created_date): self
+    public function setDate(\DateTimeInterface $date): self
     {
-        $this->created_date = $created_date;
+        $this->date = $date;
 
         return $this;
     }

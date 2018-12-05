@@ -27,7 +27,7 @@ class DashboardController extends Controller
         $repository = $this->getDoctrine()->getManager()->getRepository(Article::class);
         $ownArticles = $repository->findBy(
             array('author' => $fullUsername), // Critere
-            array('created_date' => 'desc'),        // Tri
+            array('date' => 'desc'),        // Tri
             5,                              // Limite
             0                               // Offset
         );

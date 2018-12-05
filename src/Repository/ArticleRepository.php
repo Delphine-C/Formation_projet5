@@ -25,7 +25,7 @@ class ArticleRepository extends ServiceEntityRepository
         $qb->where('a.author != :exclude')
             ->setParameter('exclude',$exclude )
             ->setMaxResults(10)
-            ->orderBy('a.created_date', 'DESC');
+            ->orderBy('a.date', 'DESC');
         return $qb->getQuery()
             ->getResult();
     }
