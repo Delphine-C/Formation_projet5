@@ -22,20 +22,20 @@ class ArticlesController extends Controller
      */
     public function connexion()
     {
+        $user = $this->getUser();
+        $fullUsername = $user->getFirstname().' '.$user->getLastname();
         $repository = $this->getDoctrine()->getManager()->getRepository(Article::class);
         $ownArticles = $repository->findBy(
-            array('author' => 'Benoit LEFEVRE'), // Critere
+            array('author' => $fullUsername), // Critere
             array('created_date' => 'desc'),        // Tri
             5,                              // Limite
             0                               // Offset
         );
-        $user = $this->getUser();
-        $fullUsername = $user->getFirstname().' '.$user->getLastname();
-        $otherArticles = $repository->otherArticles($fullUsername);
+
+
 
         return $this->render('admin/articles.html.twig',[
             'own_articles' => $ownArticles,
-            'other_articles' => $otherArticles,
         ]);
     }
 }
