@@ -62,7 +62,7 @@ h5 {
     padding-right: 0;
 }
 
-#div-nav{
+#div-nav {
     padding-left: 40px;
 }
 
@@ -71,9 +71,8 @@ h5 {
     margin-right: 50px;
 }
 
-#nav > h5 > a {
+#nav > h5 > a, footer h5 {
     color: #68C1DD;
-
 }
 
 /* --- CONTENT --- */
@@ -81,7 +80,39 @@ h5 {
     background-color: #FCFCFC;
 }
 
+/* FOOTER */
+footer {
+    height: 200px;
+    background-color: #373737;
+    color:#FFF;
+}
+
+footer ul {list-style-type: none;
+}
+
+footer li {
+    margin-right: 15px;
+}
+
+footer nav {
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+footer nav a:hover {
+    text-decoration: none;
+}
+
+.br{
+    margin-bottom:20px;
+}
 /* MEDIA QUERIES */
 @media screen and (min-width: 1280px) {
-img{border:1px red solid}
+    img {
+        border: 1px red solid
+    }
 }
