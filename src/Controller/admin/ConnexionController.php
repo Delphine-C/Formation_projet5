@@ -22,11 +22,8 @@ class ConnexionController extends Controller
     public function connexion(Request $request)
     {
         $user = new User();
-        $form = $this->createForm(ConnexionType::class, $user);
-        if($request->isMethod('POST')){
-            $form->handleRequest($request);
-            return $this->render('home.html.twig');
-        }
+        $form = $this->createForm(ConnexionType::class, $user, array(
+        ));
 
         return $this->render('admin/connexion.html.twig', [
             'form' => $form->createView()

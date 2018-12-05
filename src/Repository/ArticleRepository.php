@@ -19,6 +19,16 @@ class ArticleRepository extends ServiceEntityRepository
         parent::__construct($registry, Article::class);
     }
 
+    public function otherArticles($exclude)
+    {
+        $qb = $this->createQueryBuilder('a');
+        $qb->where('a.author != :exclude')
+            ->setParameter('exclude',$exclude )
+            ->setMaxResults(10)
+            ->orderBy('a.created_date', 'DESC');
+        return $qb->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return Article[] Returns an array of Article objects
     //  */

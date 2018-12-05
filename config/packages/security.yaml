@@ -25,6 +25,7 @@ security:
               check_path: connexion
               username_parameter: "connexion[login]"
               password_parameter: "connexion[password]"
+              default_target_path: dashboard
 
             logout:
               path: logout

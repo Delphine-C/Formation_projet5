@@ -1,0 +1,85 @@
+{% extends "admin/base.html.twig" %}
+{% block title %}Dashboard{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" type="text/css" href="{{ asset('CSS/admin/dashboard.css') }}">
+{% endblock %}
+{% block body %}
+	<div class="container-fluid">
+		<div class="row d-flex justify-content-center">
+			<div>
+				<img src="images/admin/logo_dashboard.jpg" alt="Bootstrap" class="img-fluid img-responsive logo">
+			</div>
+			<div class="col-sm-3 col-3 col-md-1 col-lg-1 text-center">
+				<h1>Dashboard</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-lg-4">
+				<p>Bonjour <span class="font-weight-bold">{{ app.user.firstname }} {{ app.user.lastname }}</span></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 container_own_article">
+				<div class="row">
+					<div class="col-md-10 col-lg-10">
+						<h3>Vos derniers articles :</h3>
+					</div>
+				</div>
+                {% for article in own_articles %}
+					<div class="row d-flex justify-content-between">
+						<div class="col-md-2 col-lg-2">
+							<a href="#"><h5>{{ article.title }}</h5></a>
+						</div>
+						<div class="col-md-2 col-lg-2">
+							<p>Date</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12">
+							<a href="#"><p>{{ article.content|slice(0, 300) ~ '...'  }}</p></a>
+						</div>
+					</div>
+					<div class="row text-right">
+						<div class="col-md-12 col-lg-12">
+							<input type="button" value="Editer article" class="btn btn-secondary btn-lg">
+						</div>
+					</div>
+                {% endfor %}
+			</div>
+		</div>
+		<div class="row">
+			<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 container_other_article ">
+				<div class="row">
+					<div class="col-md-10 col-lg-10">
+						<h3>Les derniers articles publiés :</h3>
+					</div>
+				</div>
+                {% for article in other_articles %}
+					<div class="row d-flex justify-content-between">
+						<div class="col-md-2 col-lg-2">
+							<a href="#"><h5>{{ article.title }}</h5></a>
+						</div>
+						<div class="col-md-2 col-lg-2">
+							<p>Date</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12">
+							<p>{{ article.author }}</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-lg-12">
+							<a href="#"><p>{{ article.content|slice(0, 300) ~ '...'  }}</p></a>
+						</div>
+					</div>
+					<div class="row text-right">
+						<div class="col-md-12 col-lg-12">
+							<input type="button" value="Lire article" class="btn btn-secondary btn-lg">
+						</div>
+					</div>
+                {% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
