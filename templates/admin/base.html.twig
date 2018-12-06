@@ -21,7 +21,7 @@
                 <ul>
                     <li><a href="{{ path('dashboard') }}">Accueil</a></li>
                     <li><a href="{{ path('articles') }}">Articles</a></li>
-                    <li><a href="#">Compte</a></li>
+                    <li><a href="{{ path('compte') }}">Compte</a></li>
                     {% if is_granted('ROLE_ADMIN') %}
                         <li><a href="#">Admin comptes</a></li>
                     {% endif %}
