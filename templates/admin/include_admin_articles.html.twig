@@ -1,0 +1,24 @@
+<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 container_own_article">
+    {% if other_articles is defined %}
+        {% for article in other_articles %}
+            <div class="row d-flex justify-content-between title_article">
+                <div class="col-md-2 col-lg-2">
+                    <h5>{{ article.title }}</h5>
+                </div>
+                <div class="col-md-2 col-lg-2">
+                    <p>Date</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12 content_article">
+                    <p>{{ article.content|slice(0, 300) ~ '...'  }}</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-end ">
+                <input type="button" value="Lire" class="btn btn-primary button">
+                <input type="button" value="Editer" class="btn btn-light button">
+                <input type="button" value="Supprimer" class="btn btn-danger button">
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>

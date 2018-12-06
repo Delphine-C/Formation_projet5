@@ -1,3 +1,7 @@
+#admin
+{
+    display:none;
+}
 .icone
 {
     padding-left: 100px;
@@ -6,6 +10,10 @@
 {
     padding-top: 30px;
     padding-bottom: 30px;
+}
+.username p
+{
+    margin-bottom: 0px;
 }
 .title
 {
@@ -28,6 +36,11 @@ p
 h5
 {
     font-weight: bold;
+}
+
+label
+{
+    margin-right:15px;
 }
 
 .logo
