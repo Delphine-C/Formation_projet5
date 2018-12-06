@@ -12,6 +12,7 @@ use App\Entity\Article;
 use App\Form\ConnexionType;
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,12 +29,7 @@ class JqueryController extends Controller
         $fullUsername = $user->getFirstname().' '.$user->getLastname();
         $repository = $this->getDoctrine()->getManager()->getRepository(Article::class);
         if($data === 'admin'){
-            $ownArticles = $repository->findBy(
-                array('author' => $fullUsername), // Critere
-                array('date' => 'desc'),        // Tri
-                5,                              // Limite
-                0                               // Offset
-            );
+            $ownArticles = $repository->findAll();
             foreach ($ownArticles as $article){
                 $articles[] = [
                     'id'=>$article->getId(),
@@ -43,13 +39,10 @@ class JqueryController extends Controller
                     'date'=>$article->getDate()
                 ];
             }
-            $response = new Response();
-            $tabArticle = json_encode(array('article' => $articles));
-            $response->headers->set('Content-Type', 'application/json');
-            $response->setContent($tabArticle);
-            return $this->render('admin/include_admin_articles.html.twig',[
-                'other_articles' => $response,
-            ]);
+            $content = $this->render('admin/include_admin_articles.html.twig', array('other_articles'=>$articles))->getContent();
+            return $response = new Response($content);
+        }else{
+            return $response = new Response("user");
         }
     }
 }

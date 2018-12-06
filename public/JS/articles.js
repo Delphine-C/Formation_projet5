@@ -3,7 +3,6 @@ $(document).ready(function() {
     $('#displayArticle').on("change", function () {
         //Variables
         var content = $('#displayArticle');
-        console.log(content.val());
         //Methode ajax vers le ControllerPrice
         $.ajax({
             url: 'jquery-display-article',
