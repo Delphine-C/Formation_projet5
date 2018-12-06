@@ -71,7 +71,7 @@ h5 {
     padding-top: 29px;
 }
 
-#nav > h5 > a, footer h5 {
+#nav > h5 > a, footer h5, #copyright {
     color: #68C1DD;
 }
 
@@ -83,11 +83,13 @@ h5 {
 /* FOOTER */
 footer {
     height: 200px;
+    padding-top: 20px;
     background-color: #373737;
-    color:#FFF;
+    color: #FFF;
 }
 
-footer ul {list-style-type: none;
+footer ul {
+    list-style-type: none;
 }
 
 footer li {
@@ -107,9 +109,10 @@ footer nav a:hover {
     text-decoration: none;
 }
 
-.br{
-    margin-bottom:20px;
+.br {
+    margin-bottom: 20px;
 }
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 1280px) {
 
