@@ -2,78 +2,86 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('CSS/bootstrap.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('CSS/base.css') }}">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-<header>
-    <!-- Nav -->
-    <div class="row" id="header-main">
-        <div class="col-lg-2" id="logo-nav">
-            <img src="{{ asset('images/logo_medium.png') }}" alt="Logo de cocorico agence digitale">
-        </div>
-        <div class="col-lg-8" id="div-nav">
-            <nav id="nav">
-                <h5><a href="{{ path('home_page') }}">Accueil</a></h5>
-                <h5><a href="{{ path('catalog_page') }}">Nos services</a></h5>
-                <h5><a href="{{ path('reference_page') }}">Nos clients</a></h5>
-                <h5><a href="{{ path('blog_page') }}">Blog</a></h5>
-                <h5><a href="{{ path('propos_page') }}">A propos</a></h5>
-                <h5><a href="{{ path('contact_page') }}">Nous contacter</a></h5>
-            </nav>
-        </div>
-        <div class="col-lg-2">
-            <p>logo</p>
-        </div>
+<div class="container-fluid">
+    <header>
 
-    </div>
-</header>
-{% block body %}{% endblock %}
-<!-- Footer -->
-<footer>
-    <div class="row">
-        <div class="row col-9">
-            <div class="col-lg-4">
-
-                <h5>Nous contacter</h5>
-                <ul>
-                    <li class="br">+44 345 678 903</li>
-                    <li class="br">cocorico-digital@mail.com</li>
-                    <li>12, Avenue de Renard, 87270<br>
-                        Thibault-sur-Lacombe
-                    </li>
-                </ul>
+        <div class="row" id="header-main">
+            <!-- Logo -->
+            <div class="col-auto" id="logo-nav">
+                <img src="{{ asset('images/logo_medium.png') }}" alt="Logo de cocorico agence digitale">
             </div>
-            <div class="col-lg-4">
-                <h5>Navigation</h5>
+            <!-- Nav -->
+            <div class="col-lg-9" id="div-nav">
                 <nav id="nav">
-                    <ul>
-                        <li><a href="{{ path('home_page') }}">Accueil</a></li>
-                        <li><a href="{{ path('catalog_page') }}">Nos services</a></li>
-                        <li><a href="{{ path('reference_page') }}">Nos clients</a></li>
-                        <li><a href="{{ path('blog_page') }}">Blog</a></li>
-                        <li><a href="{{ path('propos_page') }}">A propos</a></li>
-                        <li><a href="{{ path('contact_page') }}">Nous contacter</a></li>
-                    </ul>
+                    <h5><a href="{{ path('home_page') }}">Accueil</a></h5>
+                    <h5><a href="{{ path('catalog_page') }}">Nos services</a></h5>
+                    <h5><a href="{{ path('reference_page') }}">Nos clients</a></h5>
+                    <h5><a href="{{ path('blog_page') }}">Blog</a></h5>
+                    <h5><a href="{{ path('propos_page') }}">A propos</a></h5>
+                    <h5><a href="{{ path('contact_page') }}">Nous contacter</a></h5>
                 </nav>
             </div>
-            <div class="col-lg-4">
-                <h5>Blog</h5>
-                <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+            <div class="col-auto">
+                <p>social media</p>
             </div>
         </div>
-        <div class="row col-3">
-            <div class="col-12">Logos réseaux sociaux</div>
-            <div class="col-12">
-                <p>&copy; Cocorico Digital - 2018</p>
-            </div>
-        </div>
-    </div>
+    </header>
+</div>
 
-</footer>
+{% block body %}{% endblock %}
+
+<div class="container-fluid">
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="row col-9">
+                <div class="col-lg-4">
+
+                    <h5>Nous contacter</h5>
+                    <ul>
+                        <li class="br">+44 345 678 903</li>
+                        <li class="br">cocorico-digital@mail.com</li>
+                        <li>12, Avenue de Renard, 87270<br>
+                            Thibault-sur-Lacombe
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Navigation</h5>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="{{ path('home_page') }}">Accueil</a></li>
+                            <li><a href="{{ path('catalog_page') }}">Nos services</a></li>
+                            <li><a href="{{ path('reference_page') }}">Nos clients</a></li>
+                            <li><a href="{{ path('blog_page') }}">Blog</a></li>
+                            <li><a href="{{ path('propos_page') }}">A propos</a></li>
+                            <li><a href="{{ path('contact_page') }}">Nous contacter</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Blog</h5>
+                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                </div>
+            </div>
+            <div class="row col-3">
+                <div class="col-12">Logos réseaux sociaux</div>
+                <div class="col-12">
+                    <p>&copy; Cocorico Digital - 2018</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
 {% block javascripts %}{% endblock %}
+
 <script src="{{ asset('JS/bootstrap.js') }}"></script>
 </body>
 </html>
