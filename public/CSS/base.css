@@ -80,11 +80,16 @@ h5 {
     background-color: #FCFCFC;
 }
 
+.img-round{
+    border-radius: 8px;
+}
+
 button {
     border-radius: 5px;
     border: none;
     color: #FFF;
     background-image: linear-gradient(to right, orange, #CC0056);
+    width: 100px;
 }
 
 /* FOOTER */
