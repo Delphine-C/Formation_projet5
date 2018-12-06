@@ -80,6 +80,13 @@ h5 {
     background-color: #FCFCFC;
 }
 
+button {
+    border-radius: 5px;
+    border: none;
+    color: #FFF;
+    background-image: linear-gradient(to right, orange, #CC0056);
+}
+
 /* FOOTER */
 footer {
     height: 200px;
