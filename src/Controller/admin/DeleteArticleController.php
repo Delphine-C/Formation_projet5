@@ -15,7 +15,7 @@ use App\Service\ArticleCRUD;
 class DeleteArticleController extends Controller
 {
     /**
-     * @Route("/delete/{id}",name="delete_article")
+     * @Route("/supprimer-article/{id}",name="delete_article")
      */
     public function deleteArticle($id, ArticleCRUD $articleCRUD)
     {
@@ -26,7 +26,12 @@ class DeleteArticleController extends Controller
             return $this->redirectToRoute("connexion");
         }
 
-        $articleCRUD->deleteArticle($id);
+        // if user is not an admin
+        $role = $this->getUser()->getAccount();
+
+        if($role === "ROLE_ADMIN"){
+            $articleCRUD->deleteArticle($id);
+        }
 
         return $this->redirectToRoute('dashboard');
     }
