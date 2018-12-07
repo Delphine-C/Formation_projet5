@@ -8,32 +8,36 @@
 
 namespace App\Controller\admin;
 
-use App\Entity\Article;
 use App\Form\CompteType;
 use App\Entity\User;
+use App\Service\CompteCRUD;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoder;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class CompteController extends Controller
 {
     /**
-     * @Route("/compte",name="compte")
+     * @Route("/compte/{id}", name="compte")
      */
-    public function compte()
+    public function compte($id, Request $request, CompteCRUD $compteCrud, UserPasswordEncoderInterface $encoder)
     {
-        $userId = $this->getUser()->getId();
-        $repository = $this->getDoctrine()->getManager()->getRepository(User::class);
-        $compte = $repository->findOneBy(
-            ['id' => $userId]
-        );
-        $user = new User();
-        $form = $this->createForm(CompteType::class, $user, array(
-        ));
+        $user = $compteCrud->getCompte($id);
+        $form = $this->createForm(CompteType::class, $user)
+            ->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            $encoded = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($encoded);
+            $compteCrud->saveCompte($user);
+            return $this->redirectToRoute('dashboard');
+        }
 
         return $this->render('admin/compte.html.twig',[
             'form' => $form->createView(),
-            'compte' => $compte,
+            'compte' => $user,
         ]);
     }
 }

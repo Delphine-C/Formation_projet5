@@ -8,10 +8,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @UniqueEntity(
- *     fields={"login"},
- *     message="L'identifiant existe déjà"
- * )
  */
 class User implements UserInterface
 {

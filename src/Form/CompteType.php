@@ -46,6 +46,7 @@ class CompteType extends AbstractType
                 ),
                 'label'=>' '
             ))
+
             ->add('Modifier', SubmitType::class, array(
                 'attr'=> array(
                     'class'=>'btn btn-login float-right'
