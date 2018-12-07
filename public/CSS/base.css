@@ -7,7 +7,7 @@
 #header-main {
     background-color: #FFF;
     height: 70px;
-    margin-bottom: 150px;
+    margin-bottom: 9.5em;
 }
 
 #logo-nav {
@@ -47,8 +47,8 @@ body {
 /* Blocks */
 
 .block-first {
-    height: 393px;
-    margin-bottom: 258px;
+    height: 24em;
+    margin-bottom: 16em;
 }
 
 /* Titles */
@@ -157,6 +157,7 @@ a.link3 {
 .social {
     height: 16px;
     width: 16px;
+    margin-right: 15px;
 }
 
 /* Buttons */
@@ -200,8 +201,8 @@ button:hover {
 #pre-footer {
     background: url("../images/contact_section.jpg") no-repeat #547D87;
     background-size: cover;
-    height: 398px;
-    margin-top: 160px;
+    height: 24em;
+    margin-top: 10em;
     color: #FFF;
 }
 
