@@ -41,8 +41,9 @@ class CompteType extends AbstractType
                 'label'=>' ',
             ))
             ->add('password', PasswordType::class, array(
+                'required'   => false,
                 'attr' => array(
-                    'class'=>'form-control'
+                    'class'=>'form-control',
                 ),
                 'label'=>' '
             ))
