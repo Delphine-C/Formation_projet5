@@ -19,6 +19,13 @@ class DeleteArticleController extends Controller
      */
     public function deleteArticle($id, ArticleCRUD $articleCRUD)
     {
+        // if user is not login
+        $user = $this->getUser();
+        if (is_null($user)) {
+            $this->addFlash('error', "Veuillez vous connecter pour accéder à cette page.");
+            return $this->redirectToRoute("connexion");
+        }
+
         $articleCRUD->deleteArticle($id);
 
         return $this->redirectToRoute('dashboard');

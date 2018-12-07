@@ -21,11 +21,18 @@ class UpdateArticleController extends Controller
      */
     public function updateArticle($id, ArticleCRUD $articleCRUD, Request $request)
     {
+        // if user is not login
+        $user = $this->getUser();
+        if (is_null($user)) {
+            $this->addFlash('error', "Veuillez vous connecter pour accéder à cette page.");
+            return $this->redirectToRoute("connexion");
+        }
+
         $article = $articleCRUD->getArticle($id);
         $form = $this->createForm(ArticleType::class, $article)
             ->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
             $articleCRUD->saveArticle($article);
 
             return $this->redirectToRoute("blog_page");
