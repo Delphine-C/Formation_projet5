@@ -29,15 +29,22 @@ class UpdateArticleController extends Controller
         }
 
         $article = $articleCRUD->getArticle($id);
-        $form = $this->createForm(ArticleType::class, $article)
-            ->handleRequest($request);
+        $authorArticle = $article->getLastname();
+        $role = $this->getUser()->getAccount();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $articleCRUD->saveArticle($article);
+        // if article is not by user
+        if ($user->getLastname() === $authorArticle | $role === "ROLE_ADMIN") {
+            $form = $this->createForm(ArticleType::class, $article)
+                ->handleRequest($request);
 
-            return $this->redirectToRoute("blog_page");
+            if ($form->isSubmitted() && $form->isValid()) {
+                $articleCRUD->saveArticle($article);
+
+                return $this->redirectToRoute("blog_page");
+            }
+            return $this->render('admin/article.html.twig', ['form' => $form->createView()]);
         }
 
-        return $this->render('admin/article.html.twig', ['form' => $form->createView()]);
+        return $this->redirectToRoute("dashboard");
     }
 }
