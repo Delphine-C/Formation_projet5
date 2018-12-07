@@ -22,7 +22,13 @@ class DashboardController extends Controller
      */
     public function connexion()
     {
+        // if user is not login
         $user = $this->getUser();
+        if (is_null($user)) {
+            $this->addFlash('error', "Veuillez vous connecter pour accéder à cette page.");
+            return $this->redirectToRoute("connexion");
+        }
+
         $fullUsername = $user->getFirstname().' '.$user->getLastname();
         $repository = $this->getDoctrine()->getManager()->getRepository(Article::class);
         $ownArticles = $repository->findBy(

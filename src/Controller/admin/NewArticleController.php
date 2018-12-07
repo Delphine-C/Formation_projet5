@@ -22,6 +22,13 @@ class NewArticleController extends Controller
      */
     public function newArticle(Request $request, ArticleCRUD $articleCRUD)
     {
+        // if user is not login
+        $user = $this->getUser();
+        if (is_null($user)) {
+            $this->addFlash('error', "Veuillez vous connecter pour accéder à cette page.");
+            return $this->redirectToRoute("connexion");
+        }
+
         $article = new Article();
         $form = $this->createForm(ArticleType::class, $article)
             ->handleRequest($request);

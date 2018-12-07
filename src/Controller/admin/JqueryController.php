@@ -23,8 +23,14 @@ class JqueryController extends Controller
      */
     public function connexion(Request $request)
     {
-        $data = $request->query->get('display');
+        // if user is not login
         $user = $this->getUser();
+        if (is_null($user)) {
+            $this->addFlash('error', "Veuillez vous connecter pour accéder à cette page.");
+            return $this->redirectToRoute("connexion");
+        }
+
+        $data = $request->query->get('display');
         $articles = [];
         $fullUsername = $user->getFirstname().' '.$user->getLastname();
         $repository = $this->getDoctrine()->getManager()->getRepository(Article::class);

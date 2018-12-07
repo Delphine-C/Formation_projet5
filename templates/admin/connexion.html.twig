@@ -24,6 +24,11 @@
 				</div>
             {% endif %}
         {% endif %}
+        {% for message in app.flashes('error') %}
+			<div class="flash-error">
+                {{ message }}
+			</div>
+        {% endfor %}
 		<div class="row">
 			<div class="col-md-4 login-sec">
 				<h2 class="text-center">Cocorico Digital</h2>
