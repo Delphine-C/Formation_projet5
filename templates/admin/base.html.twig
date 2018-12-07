@@ -23,7 +23,7 @@
                     <li><a href="{{ path('articles') }}">Articles</a></li>
                     <li><a href="{{ path('compte', {'id': app.user.id}) }}">Compte</a></li>
                     {% if is_granted('ROLE_ADMIN') %}
-                        <li><a href="#">Admin comptes</a></li>
+                        <li><a href="{{ path('comptes') }}">Admin comptes</a></li>
                     {% endif %}
                     <li><a href="{{ path('logout') }}">Deconexion</a></li>
                 </ul>
