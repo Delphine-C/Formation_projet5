@@ -2,57 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 
-/* CONTENT */
-body {
-    width: 100%;
-}
+/* HEADER */
 
-h1 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: #68C1DD;
-
-}
-
-h2, h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 28px;
-    letter-spacing: 7px;
-}
-
-h2 {
-    color: #373737
-}
-
-h3 {
-    color: #FCFCFC
-}
-
-h4, h5 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-}
-
-h4 {
-    font-size: 20px;
-    color: #CC0056;
-    line-height: 28px;
-    letter-spacing: 13px;
-}
-
-h5 {
-    font-size: 12px;
-    color: #373737;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* --- HEADER --- */
 #header-main {
     background-color: #FFF;
     height: 70px;
+    margin-bottom: 150px;
 }
 
 #logo-nav {
@@ -75,24 +30,168 @@ h5 {
     color: #68C1DD;
 }
 
-/* --- CONTENT --- */
+/* CONTENT */
+
+body {
+    font-size: 16px;
+}
+
+#left {
+    float: left;
+}
+
 .container-fluid {
     background-color: #FCFCFC;
 }
 
-.img-round{
+/* Blocks */
+
+.block-first {
+    height: 393px;
+    margin-bottom: 258px;
+}
+
+/* Titles */
+
+h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 2.25em;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #68C1DD;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.75em;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.007em;
+    color: #373737;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.75em;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.007em;
+    color: #FCFCFC;
+}
+
+h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1.25em;
+    letter-spacing: 0.013em;
+    color: #CC0056;
+}
+
+h5 {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.15em;
+    color: #373737;
+}
+
+/* Paragraphs*/
+
+p.envaleur {
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.75em;
+    letter-spacing: 0.03em;
+    color: #373737;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875em;
+    font-weight: normal;
+    line-height: 1.25em;
+    letter-spacing: 0.017em;
+    color: #373737;
+}
+
+/* Links */
+
+a.link1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.875em;
+    line-height: 1.75em;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #CC0056;
+}
+
+a.link2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.09em;
+    color: #CC0056;
+}
+
+a.link3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.875em;
+    line-height: auto;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #68C1DD;
+}
+
+/* Images */
+
+.img-round {
     border-radius: 8px;
 }
 
+/* Buttons */
+
 button {
-    border-radius: 5px;
-    border: none;
-    color: #FFF;
-    background-image: linear-gradient(to right, orange, #CC0056);
-    width: 100px;
+    background-image: linear-gradient(to right, #FF5E60 0%, #CC0056 100%);
+    border-radius: 8px;
+    height: 50px;
+    min-width: 130px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 0.875em;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #FCFCFC;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 20);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    padding: 0 2em;
+}
+
+.btnhover {
+    background-color: #68C1DD;
+    color: #373737;
+    border-radius: 8px;
+    height: 50px;
+    min-width: 130px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 0.875em;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 20);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    padding: 0 2em;
 }
 
 /* FOOTER */
+
 footer {
     height: 200px;
     padding-top: 20px;

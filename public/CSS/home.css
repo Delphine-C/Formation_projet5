@@ -2,12 +2,6 @@ div {
     border: 1px solid;
 }
 
-button {
-    margin-top: 2em;
-}
-
-
-
 img:not(.display-small, #logo-nav img) {
     display: block;
     margin-left:auto;
@@ -21,14 +15,6 @@ img:not(.display-small, #logo-nav img) {
 
     header {
         margin: auto
-    }
-
-    button, h2 {
-        margin-bottom: 1em;
-    }
-
-    header h2 {
-        margin-bottom: 2em;
     }
 }
 
