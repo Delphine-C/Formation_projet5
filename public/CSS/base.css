@@ -154,6 +154,11 @@ a.link3 {
     border-radius: 8px;
 }
 
+.social {
+    height: 16px;
+    width: 16px;
+}
+
 /* Buttons */
 
 button {
@@ -171,9 +176,10 @@ button {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     padding: 0 2em;
+    border-width: 0;
 }
 
-.btnhover {
+button:hover {
     background-color: #68C1DD;
     color: #373737;
     border-radius: 8px;
@@ -188,6 +194,15 @@ button {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     padding: 0 2em;
+}
+
+/* BOTTOM PAGE */
+#pre-footer {
+    background: url("../images/contact_section.jpg") no-repeat #547D87;
+    background-size: cover;
+    height: 398px;
+    margin-top: 160px;
+    color: #FFF;
 }
 
 /* FOOTER */
