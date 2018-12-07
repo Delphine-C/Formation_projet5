@@ -32,7 +32,7 @@ class NewArticleController extends Controller
             return $this->redirectToRoute('blog_page');
         }
 
-        return $this->render('admin/add_article.html.twig', [
+        return $this->render('admin/article.html.twig', [
             'form'=>$form->createView()
         ]);
     }
