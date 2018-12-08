@@ -27,11 +27,11 @@ class UpdateArticleController extends Controller
         $userlogin->testLoggedInUser($user);
 
         $article = $articleCRUD->getArticle($id);
-        $authorArticle = $article->getLastname();
-        $role = $this->getUser()->getAccount();
+        $authorArticle = $article->getAuthor()->getId();
+        $role = $user->getAccount();
 
         // if article is not by user
-        if ($user->getLastname() === $authorArticle | $role === "ROLE_ADMIN") {
+        if ($user->getId() === $authorArticle | $role === "ROLE_ADMIN") {
             $form = $this->createForm(ArticleType::class, $article)
                 ->handleRequest($request);
 
