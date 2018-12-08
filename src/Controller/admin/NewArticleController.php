@@ -29,14 +29,14 @@ class NewArticleController extends Controller
             return $this->redirectToRoute("connexion");
         }
 
-        $article = new Article();
+        $article = new Article($user);
         $form = $this->createForm(ArticleType::class, $article)
             ->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
             $articleCRUD->saveArticle($article);
 
-            return $this->redirectToRoute('blog_page');
+            return $this->redirectToRoute('dashboard');
         }
 
         return $this->render('admin/article.html.twig', [

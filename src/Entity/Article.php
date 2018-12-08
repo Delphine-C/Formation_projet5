@@ -25,7 +25,8 @@ class Article
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $author;
 
@@ -40,10 +41,10 @@ class Article
      */
     private $date;
 
-    public function __construct()
+    public function __construct($userEntity)
     {
         $this->date=new \DateTime();
-        $this->author='Auteur';
+        $this->author=$userEntity;
     }
 
     public function getId(): ?int
@@ -63,7 +64,7 @@ class Article
         return $this;
     }
 
-    public function getAuthor(): ?string
+    public function getAuthor(): ?user
     {
         return $this->author;
     }

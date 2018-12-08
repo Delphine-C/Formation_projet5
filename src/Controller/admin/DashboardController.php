@@ -29,18 +29,18 @@ class DashboardController extends Controller
             return $this->redirectToRoute("connexion");
         }
 
-        $fullUsername = $user->getFirstname().' '.$user->getLastname();
+        $authorId = $user->getId();
         $repository = $this->getDoctrine()->getManager()->getRepository(Article::class);
         $ownArticles = $repository->findBy(
-            array('author' => $fullUsername), // Critere
+            array('author' => $authorId), // Critere
             array('date' => 'desc'),        // Tri
             5,                              // Limite
             0                               // Offset
         );
 
-        $otherArticles = $repository->otherArticles($fullUsername);
+        $otherArticles = $repository->otherArticles($authorId);
 
-        return $this->render('admin/dashboard.html.twig',[
+        return $this->render('admin/dashboard.html.twig', [
             'own_articles' => $ownArticles,
             'other_articles' => $otherArticles,
         ]);

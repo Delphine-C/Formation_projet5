@@ -29,10 +29,10 @@ class ArticlesController extends Controller
             return $this->redirectToRoute("connexion");
         }
 
-        $fullUsername = $user->getFirstname().' '.$user->getLastname();
+        $authorId = $user->getId();
         $repository = $this->getDoctrine()->getManager()->getRepository(Article::class);
         $ownArticles = $repository->findBy(
-            array('author' => $fullUsername), // Critere
+            array('author' => $authorId), // Critere
             array('date' => 'desc'),        // Tri
             5,                              // Limite
             0                               // Offset
