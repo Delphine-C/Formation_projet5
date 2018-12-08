@@ -14,20 +14,18 @@ use App\Entity\Article;
 use App\Form\ArticleType;
 use Symfony\Component\HttpFoundation\Request;
 use App\Service\ArticleCRUD;
+use App\Service\Userlogin;
 
 class NewArticleController extends Controller
 {
     /**
      * @Route("/creer-article",name="new_article")
      */
-    public function newArticle(Request $request, ArticleCRUD $articleCRUD)
+    public function newArticle(Request $request, ArticleCRUD $articleCRUD, Userlogin $userlogin)
     {
         // if user is not login
         $user = $this->getUser();
-        if (is_null($user)) {
-            $this->addFlash('error', "Veuillez vous connecter pour accéder à cette page.");
-            return $this->redirectToRoute("connexion");
-        }
+        $userlogin->testLoggedInUser($user);
 
         $article = new Article($user);
         $form = $this->createForm(ArticleType::class, $article)

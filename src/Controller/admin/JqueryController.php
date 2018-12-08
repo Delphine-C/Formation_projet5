@@ -16,19 +16,18 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
+use App\Service\Userlogin;
+
 class JqueryController extends Controller
 {
     /**
      * @Route("/jquery-display-article",name="jquery-display-article")
      */
-    public function connexion(Request $request)
+    public function connexion(Request $request, Userlogin $userlogin)
     {
         // if user is not login
         $user = $this->getUser();
-        if (is_null($user)) {
-            $this->addFlash('error', "Veuillez vous connecter pour accéder à cette page.");
-            return $this->redirectToRoute("connexion");
-        }
+        $userlogin->testLoggedInUser($user);
 
         $data = $request->query->get('display');
         $articles = [];

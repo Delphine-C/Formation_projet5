@@ -13,20 +13,18 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Form\ArticleType;
 use App\Service\ArticleCRUD;
 use Symfony\Component\HttpFoundation\Request;
+use App\Service\Userlogin;
 
 class UpdateArticleController extends Controller
 {
     /**
      * @Route("/modifier-article/{id}",name="update_article")
      */
-    public function updateArticle($id, ArticleCRUD $articleCRUD, Request $request)
+    public function updateArticle($id, ArticleCRUD $articleCRUD, Request $request, Userlogin $userlogin)
     {
         // if user is not login
         $user = $this->getUser();
-        if (is_null($user)) {
-            $this->addFlash('error', "Veuillez vous connecter pour accéder à cette page.");
-            return $this->redirectToRoute("connexion");
-        }
+        $userlogin->testLoggedInUser($user);
 
         $article = $articleCRUD->getArticle($id);
         $authorArticle = $article->getLastname();

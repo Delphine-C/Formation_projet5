@@ -14,20 +14,18 @@ use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Service\Userlogin;
 
 class DashboardController extends Controller
 {
     /**
      * @Route("/dashboard",name="dashboard")
      */
-    public function connexion()
+    public function connexion(Userlogin $userlogin)
     {
         // if user is not login
         $user = $this->getUser();
-        if (is_null($user)) {
-            $this->addFlash('error', "Veuillez vous connecter pour accéder à cette page.");
-            return $this->redirectToRoute("connexion");
-        }
+        $userlogin->testLoggedInUser($user);
 
         $authorId = $user->getId();
         $repository = $this->getDoctrine()->getManager()->getRepository(Article::class);

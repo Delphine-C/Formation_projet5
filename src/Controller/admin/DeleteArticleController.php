@@ -11,20 +11,18 @@ namespace App\Controller\admin;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Service\ArticleCRUD;
+use App\Service\Userlogin;
 
 class DeleteArticleController extends Controller
 {
     /**
      * @Route("/supprimer-article/{id}",name="delete_article")
      */
-    public function deleteArticle($id, ArticleCRUD $articleCRUD)
+    public function deleteArticle($id, ArticleCRUD $articleCRUD,Userlogin $userlogin)
     {
         // if user is not login
         $user = $this->getUser();
-        if (is_null($user)) {
-            $this->addFlash('error', "Veuillez vous connecter pour accéder à cette page.");
-            return $this->redirectToRoute("connexion");
-        }
+        $userlogin->testLoggedInUser($user);
 
         // if user is not an admin
         $role = $this->getUser()->getAccount();
