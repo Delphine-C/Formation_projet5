@@ -28,6 +28,20 @@ class ArticleCRUD
         return $articles;
     }
 
+    public function getOwnArticles($userId)
+    {
+        $ownArticles = $this->em
+            ->getRepository('App:Article')
+            ->findBy(
+                array('author' => $userId),     // Critere
+                array('date' => 'desc'),        // Tri
+                5,                         // Limite
+                0                         // Offset
+            );
+
+        return $ownArticles;
+    }
+
     public function getArticle($id)
     {
         $article = $this->em

@@ -15,28 +15,25 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Service\Userlogin;
+use App\Service\ArticleCRUD;
 
 class DashboardController extends Controller
 {
     /**
      * @Route("/dashboard",name="dashboard")
      */
-    public function connexion(Userlogin $userlogin)
+    public function connexion(Userlogin $userlogin, ArticleCRUD $articleCRUD)
     {
         // if user is not login
         $user = $this->getUser();
         $userlogin->testLoggedInUser($user);
 
         $authorId = $user->getId();
-        $repository = $this->getDoctrine()->getManager()->getRepository(Article::class);
-        $ownArticles = $repository->findBy(
-            array('author' => $authorId), // Critere
-            array('date' => 'desc'),        // Tri
-            5,                              // Limite
-            0                               // Offset
-        );
+        $ownArticles = $articleCRUD->getOwnArticles($authorId);
 
-        $otherArticles = $repository->otherArticles($authorId);
+        $otherArticles = $this->getDoctrine()->getManager()
+            ->getRepository(Article::class)
+            ->otherArticles($authorId);
 
         return $this->render('admin/dashboard.html.twig', [
             'own_articles' => $ownArticles,

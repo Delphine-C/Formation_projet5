@@ -15,27 +15,20 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Service\Userlogin;
+use App\Service\ArticleCRUD;
 
 class ArticlesController extends Controller
 {
     /**
      * @Route("/articles",name="articles")
      */
-    public function connexion(Userlogin $userlogin)
+    public function connexion(Userlogin $userlogin, ArticleCRUD $articleCRUD)
     {
         // if user is not login
         $user = $this->getUser();
         $userlogin->testLoggedInUser($user);
 
-        $authorId = $user->getId();
-        $repository = $this->getDoctrine()->getManager()->getRepository(Article::class);
-        $ownArticles = $repository->findBy(
-            array('author' => $authorId), // Critere
-            array('date' => 'desc'),        // Tri
-            5,                              // Limite
-            0                               // Offset
-        );
-
+        $ownArticles=$articleCRUD->getOwnArticles($user->getId());
 
         return $this->render('admin/articles.html.twig',[
             'own_articles' => $ownArticles,
