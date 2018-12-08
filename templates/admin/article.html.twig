@@ -1,7 +1,12 @@
-{% extends "base.html.twig" %}
+{% extends "admin/base.html.twig" %}
 
 {% block stylesheets %}
-
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>
+        tinyMCE.init({
+            selector:"textarea"
+        });
+    </script>
 {% endblock %}
 
 {% block body %}
