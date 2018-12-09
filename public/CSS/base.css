@@ -67,6 +67,16 @@ body {
 
 .white {
     background: #FFF;
+    margin: 0.2em;
+}
+
+.white p, h6, a {
+    margin: 0.5em;
+}
+
+.white img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 /* Titles */
