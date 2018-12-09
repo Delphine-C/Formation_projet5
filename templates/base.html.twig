@@ -52,45 +52,57 @@
 
 <!-- Footer -->
 <footer>
-    <div class="row">
-        <div class="row col-9">
-            <div class="col-lg-4">
-                <h5>Nous contacter</h5>
-                <ul>
-                    <li class="br">+44 345 678 903</li>
-                    <li class="br">cocorico-digital@mail.com</li>
-                    <li>12, Avenue de Renard, 87270<br>
-                        Thibault-sur-Lacombe
+    <div class="row d-flex justify-content-between">
+
+            <div class="col-auto">
+                <h5 class="mb-0">Nous contacter</h5>
+            </div>
+            <div class="col-auto d-flex align-items-start p-0">
+                <ul class="p-0">
+                    <li class="br text-left"><a class="m-0" href="tel:+44345678903">+44 345 678 903</a></li>
+                    <li class="br text-left">cocorico-digital@mail.com</li>
+                    <li>
+                        <address class="br text-left">
+                            12, Avenue de Renard, 87270
+                            <div class="text-center"> Thibault-sur-Lacombe</div>
+                        </address>
+
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-4">
-                <h5>Navigation</h5>
-                <nav id="nav">
-                    <ul>
-                        <li><a href="{{ path('home_page') }}">Accueil</a></li>
-                        <li><a href="{{ path('catalog_page') }}">Nos services</a></li>
-                        <li><a href="{{ path('reference_page') }}">Nos clients</a></li>
-                        <li><a href="{{ path('blog_page') }}">Blog</a></li>
-                        <li><a href="{{ path('propos_page') }}">A propos</a></li>
-                        <li><a href="{{ path('contact_page') }}">Nous contacter</a></li>
-                    </ul>
-                </nav>
+            <div class="col-auto">
+                <h5 class="mb-0">Navigation</h5>
             </div>
-            <div class="col-lg-4">
-                <h5>Blog</h5>
+            <div class="col-auto p-0">
+                <div class="col-auto d-flex align-items-start p-0">
+                    <nav id="nav">
+                        <ul class="p-0">
+                            <li><a href="{{ path('home_page') }}">Accueil</a></li>
+                            <li><a href="{{ path('catalog_page') }}">Nos services</a></li>
+                            <li><a href="{{ path('reference_page') }}">Nos clients</a></li>
+                            <li><a href="{{ path('blog_page') }}">Blog</a></li>
+                            <li><a href="{{ path('propos_page') }}">A propos</a></li>
+                            <li><a href="{{ path('contact_page') }}">Nous contacter</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-auto">
+                <h5 class="mb-0">Blog</h5>
+            </div>
+            <div class="col-lg-2 col-md-2">
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
             </div>
-        </div>
-        <div class="row col-3">
-            <div class="col-12">
-                <img src="{{ asset('images/social/linkedin-logo-blanc.svg') }}" class="social" alt="logo linkedin">
-                <img src="{{ asset('images/social/facebook-logo-blanc.svg') }}" class="social" alt="logo facebook">
+            <div class="row col-2 mr-xl-5">
+                <div class="col-12 text-right">
+                    <img src="{{ asset('images/social/linkedin-logo-blanc.svg') }}" class="social" alt="logo linkedin">
+                    <img src="{{ asset('images/social/facebook-logo-blanc.svg') }}" class="social" alt="logo facebook">
+                </div>
+                <div class="col-12 text-right align-self-end">
+                    <p id="copyright">&copy; Cocorico Digital - 2018</p>
+                </div>
             </div>
-            <div class="col-12">
-                <p id="copyright">&copy; Cocorico Digital - 2018</p>
-            </div>
-        </div>
+
     </div>
 </footer>
 
