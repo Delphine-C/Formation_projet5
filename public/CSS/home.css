@@ -20,10 +20,6 @@ img:not(.display-small, #logo-nav img) {
 }
 
 @media screen and (min-width: 1280px) {
-    h2 {
-        margin-bottom: 1.5em;
-    }
-
     .display-large{
         display: none;
     }

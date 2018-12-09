@@ -79,6 +79,14 @@ body {
     border-top-right-radius: 5px;
 }
 
+.block-decal:nth-child(2n), .block-decal:nth-child(4n) {
+    top: 10%;
+}
+
+.block-decal:nth-child(3n), .block-decal:nth-child(4n) {
+    margin-top: 10%;
+}
+
 /* Titles */
 
 h1 {
@@ -97,6 +105,7 @@ h2 {
     line-height: normal;
     letter-spacing: 0.007em;
     color: #373737;
+    margin-bottom: 1.5em;
 }
 
 h3 {
