@@ -43,6 +43,10 @@ body {
 
 /* Blocks */
 
+.container-fluid header {
+    margin-bottom: 8em;
+}
+
 .block-first {
     height: 24em;
     margin-bottom: 16em;
@@ -251,7 +255,8 @@ button:hover {
     margin-top: 10em;
     color: #FFF;
 }
-#pre-footer h2, p {
+
+#pre-footer h2, #pre-footer p {
     color: #FCFCFC;
 }
 
@@ -262,6 +267,10 @@ footer {
     padding-top: 20px;
     background-color: #373737;
     color: #FFF;
+}
+
+footer p {
+    color: #FFF
 }
 
 footer ul {
