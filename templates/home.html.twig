@@ -9,24 +9,20 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
+    <div class="container-fluid page-content">
         <header>
             <div class="row justify-content-around block-first">
-                <div class="col-xs-12 col-lg-5 justify-content-around">
-                    <div class="row col-xs-6">
+                <div class="col-xs-12 col-lg-4 justify-content-around">
+                    <div class="row">
                         <h1>Cocorico Digital</h1>
                     </div>
-                    <div class="row col-xs-6">
+                    <div class="row">
                         <h2>L'agence web au coeur de vos besoins</h2>
                     </div>
                     <div class="row">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nimis multa. Honesta oratio,
-                            Socratica, Platonis etiam. Id enim volumus, id contendimus, ut officii fructus sit ipsum
-                            officium. Vidit Homerus probari fabulam non posse, si cantiunculis tantus irretitus vir
-                            teneretur; </p>
-                        <p>Et non ex maxima parte de tota iudicabis? Paulum, cum regem Persem captum adduceret,
-                            eodem flumine invectio? Ut placet, inquit, etsi enim illud erat aptius, aequum cuique concedere.
-                            Duo Reges: constructio interrete. Neque solum ea communia, verum etiam paria esse dixerunt. </p>
+                        <p class="envaleur">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo felis
+                            turpis, sit amet rhoncus augue fringilla aliquam. Duis eleifend massa non quam molestie
+                            dictum.</p>
                     </div>
                     <div class="row justify-content-around">
                         <a>
@@ -34,70 +30,57 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-5 display-small">
+                <div class="col-lg-6 display-small">
                     <img src="{{ asset('images/home-intro.jpg') }}" class="img-fluid img-round">
                 </div>
             </div>
         </header>
 
-
-        <section class="row">
-            <div class="row col-12">
+        <div class="row">
+            <div class="row col-12 margin-auto">
                 <h4>Nos services</h4>
             </div>
-            <div class="row d-flex justify-content-around">
+            <div class="row d-flex justify-content-around margin-auto">
                 <div class="col-xs-12 col-lg-3">
                     <div class="row justify-content-center">
-                        <img src="{{ asset('images/marketing.svg') }} " height="100" width="100">
+                        <img src="{{ asset('images/home/1.marketing.svg') }} " height="100" width="100">
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Tria
-                            genera bonorum; Et quidem, inquit, vehementer errat; Aliter homines, aliter philosophos loqui
-                            putas
-                            oportere? Vide, quaeso, rectumne sit. Duo Reges: constructio interrete. Traditur, inquit, ab
-                            Epicuro
-                            ratio neglegendi doloris. </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam?
+                            Tria</p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-3">
                     <div class="row justify-content-center">
-                        <img src="{{ asset('images/design.svg') }} " height="100" width="100">
+                        <img src="{{ asset('images/home/2.design.svg') }} " height="100" width="100">
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Tria
-                            genera bonorum; Et quidem, inquit, vehementer errat; Aliter homines, aliter philosophos loqui
-                            putas
-                            oportere? Vide, quaeso, rectumne sit. Duo Reges: constructio interrete. Traditur, inquit, ab
-                            Epicuro
-                            ratio neglegendi doloris. </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam?
+                            Tria</p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-lg-3">
                     <div class="row justify-content-center">
-                        <img src="{{ asset('images/dev.svg') }} " height="100" width="100">
+                        <img src="{{ asset('images/home/3.dev.svg') }} " height="100" width="100">
                     </div>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam? Tria
-                            genera bonorum; Et quidem, inquit, vehementer errat; Aliter homines, aliter philosophos loqui
-                            putas
-                            oportere? Vide, quaeso, rectumne sit. Duo Reges: constructio interrete. Traditur, inquit, ab
-                            Epicuro
-                            ratio neglegendi doloris. </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Inquit, dasne adolescenti veniam?
+                            Tria</p>
                     </div>
                 </div>
             </div>
-            <div class="row col-xs-12 col-lg-12 justify-content-around">
+            <div class="row col-xs-12 col-lg-12 justify-content-around margin-auto">
                 <a href="#">
                     <button>Button</button>
                 </a>
             </div>
-        </section>
+        </div>
 
-        <section class="row">
-            <div class="row col-lg-12">
-                <h4>Nos clients</h4>
-            </div>
-            <div class="row offset-xs-1 col-xs-10 offset-lg-2 col-lg-8 justify-content-around">
+        <section class="row ">
+            <div class="row offset-xs-1 col-xs-10 offset-lg-2 col-lg-8 justify-content-around display-large">
+                <div class="row col-lg-12">
+                    <h4>Nos clients</h4>
+                </div>
                 <!-- Carousel -->
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -143,7 +126,33 @@
 
                 </div>
             </div>
-            <div class="row col-xs-12 col-lg-12 justify-content-around">
+            <div class="row d-flex justify-content-around display-small home-customers block160">
+                <div class="row col-lg-12">
+                    <h4>Nos clients</h4>
+                </div>
+                <div class="col-lg-3 no-padding white">
+                    <img src="{{ asset('images/home/projet1.jpg') }}" class="img-fluid" alt="" height="180" width="320">
+                    <p>Type de projet</p>
+                    <h6>Titre h6</h6>
+                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    <a href="#" class="link1">Voir le projet</a>
+                </div>
+                <div class="col-lg-3 no-padding white">
+                    <img src="{{ asset('images/home/projet2.jpg') }}" class="img-fluid" alt="" height="180" width="320">
+                    <p>Type de projet</p>
+                    <h6>Titre h6</h6>
+                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    <a href="#" class="link1">Voir le projet</a>
+                </div>
+                <div class="col-lg-3 no-padding white">
+                    <img src="{{ asset('images/home/projet3.jpg') }}" class="img-fluid" alt="" height="180" width="320">
+                    <p>Type de projet</p>
+                    <h6>Titre h6</h6>
+                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                    <a href="#" class="link1">Voir le projet</a>
+                </div>
+            </div>
+            <div class="row col-xs-12 col-lg-12 justify-content-around margin-auto">
                 <a href="#">
                     <button>Button</button>
                 </a>

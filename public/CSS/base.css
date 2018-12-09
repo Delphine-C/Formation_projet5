@@ -34,14 +34,11 @@
 
 body {
     font-size: 16px;
+    background-color: #FCFCFC;
 }
 
 #left {
     float: left;
-}
-
-.container-fluid {
-    background-color: #FCFCFC;
 }
 
 /* Blocks */
@@ -49,6 +46,27 @@ body {
 .block-first {
     height: 24em;
     margin-bottom: 16em;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.page-content {
+    width: 60em;
+}
+
+.block160 {
+    margin-top: 10em !important;
+}
+
+.no-padding {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.white {
+    background: #FFF;
 }
 
 /* Titles */
@@ -87,6 +105,7 @@ h4 {
     line-height: 1.25em;
     letter-spacing: 0.013em;
     color: #CC0056;
+    margin-bottom: 2.5em;
 }
 
 h5 {
@@ -178,10 +197,11 @@ button {
     transition-duration: 0.4s;
     padding: 0 2em;
     border-width: 0;
+    margin-top: 3.5em;
 }
 
 button:hover {
-    background-color: #68C1DD;
+    background-color: #68C1DD!important;
     color: #373737;
     border-radius: 8px;
     height: 50px;
@@ -198,6 +218,7 @@ button:hover {
 }
 
 /* BOTTOM PAGE */
+
 #pre-footer {
     background: url("../images/contact_section.jpg") no-repeat #547D87;
     background-size: cover;
