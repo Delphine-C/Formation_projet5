@@ -1,32 +1,28 @@
 {% extends "base.html.twig" %}
+
 {% block stylesheets %}
     <link href="{{ asset('CSS/references.css') }}" rel="stylesheet">
 {% endblock %}
+
 {% block body %}
-    <div class="container-fluid">
+    <div class="container-fluid  page-content">
         <header>
             <div class="row justify-content-around">
                 <div class="col-xs-12 col-lg-5 justify-content-around">
                     <div class="row col-xs-6">
-                        <h1>A Big Title</h1>
+                        <span><img src=""></span><h1>Nos clients</h1>
                     </div>
                     <div class="row col-xs-6">
                         <h2>A Subtitle</h2>
                     </div>
                     <div class="row">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nimis multa. Honesta oratio,
-                            Socratica, Platonis etiam. Id enim volumus, id contendimus, ut officii fructus sit ipsum
-                            officium. Vidit Homerus probari fabulam non posse, si cantiunculis tantus irretitus vir
-                            teneretur; </p>
-                        <p>Et non ex maxima parte de tota iudicabis? Paulum, cum regem Persem captum adduceret,
-                            eodem flumine invectio? Ut placet, inquit, etsi enim illud erat aptius, aequum cuique
-                            concedere.
-                            Duo Reges: constructio interrete. Neque solum ea communia, verum etiam paria esse
-                            dixerunt. </p>
+                        <p class="envaleur">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo felis
+                            turpis, sit amet rhoncus augue fringilla aliquam. Duis eleifend massa non quam molestie
+                            dictum.</p>
                     </div>
                 </div>
                 <div class="col-lg-5 display-small">
-                    <img src="{{ asset('images/img.jpeg') }}" class="img-fluid ">
+                    <img src="{{ asset('images/home-intro.jpg') }}" class="img-fluid ">
                 </div>
             </div>
         </header>
