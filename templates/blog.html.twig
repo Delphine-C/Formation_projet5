@@ -1,83 +1,45 @@
 {% extends "base.html.twig" %}
+
 {% block stylesheets %}
     <link href="{{ asset('CSS/blog.css') }}" rel="stylesheet">
 {% endblock %}
+
 {% block body %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="offset-md-2 offset-lg-2 col-md-8 col-lg-8" style="border-style: solid;">
-                <h3>Subtitle</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="offset-md-2 offset-lg-2 col-md-8 col-lg-8" style="border-style: solid;">
-                <div class="row d-flex justify-content-around">
-                    <div class="col-md-6 col-lg-6 thumbnail">
-                        <img src="images/presentation.jpg" alt="Bootstrap" class="img-fluid img-responsive">
-                        <div class="caption text-center">
-                            <h1>Example headline.</h1>
-                            <div class="caption_button">
-                                <input type="button" value="Lire plus" class="btn btn-secondary btn-lg">
-                            </div>
-                        </div>
-
+    <div class="container-fluid  page-content">
+        <header>
+            <div class="row justify-content-around">
+                <div class="col-xs-12 col-lg-5 justify-content-around">
+                    <div class="row col-xs-6">
+                        <img src="{{ asset('images/logoH1/blog.svg') }}" class="h1">
+                        <h1>Blog</h1>
                     </div>
-                    <div class="col-md-6 col-lg-6 thumbnail">
-                        <div class="decale">
-                            <img src="images/presentation.jpg" alt="Bootstrap" class="img-fluid img-responsive">
-                            <div class="caption text-center">
-                                <h1>Example headline.</h1>
-                                <div class="caption_button">
-                                    <input type="button" value="Lire plus" class="btn btn-secondary btn-lg">
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="row col-xs-6">
+                        <h2>A Subtitle</h2>
                     </div>
+                    <div class="row">
+                        <p class="envaleur">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo felis
+                            turpis, sit amet rhoncus augue fringilla aliquam. Duis eleifend massa non quam molestie
+                            dictum.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 display-small">
+                    <img src="{{ asset('images/home-intro.jpg') }}" class="img-fluid ">
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="offset-md-2 offset-lg-2 col-md-8 col-lg-8" style="border-style: solid;">
-                <div class="row d-flex justify-content-around">
-                    <div class="col-md-6 col-lg-6 thumbnail">
-                        <img src="images/presentation.jpg" alt="Bootstrap" class="img-fluid img-responsive">
-                        <div class="caption text-center">
-                            <h1>Example headline.</h1>
-                            <div class="caption_button">
-                                <input type="button" value="Lire plus" class="btn btn-secondary btn-lg">
-                            </div>
-                        </div>
+        </header>
 
+        <div class="row block">
+            <div class="row d-flex justify-content-around display-small">
+                {% for article in articles %}
+                    <div class="col-lg-4 no-padding shadow-sm p-0 mb-0 bg-white rounded white block-decal thumbnail">
+                        <img src="{{ asset('images/home/projet1.jpg') }}" class="img-fluid" alt="" height="180"
+                             width="100%">
+                        <h5>Ecrit par {{ article.author.firstname }} le {{ article.date|date('d.m.Y') }}</h5>
+                        <h6>{{ article.title }}</h6>
+                        <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                        <a href="{{ path('article_page', {'id': article.id}) }}" class="link1">Lire l'article</a>
                     </div>
-                    <div class="col-md-6 col-lg-6 thumbnail">
-                        <div class="decale">
-                            <img src="images/presentation.jpg" alt="Bootstrap" class="img-fluid img-responsive">
-                            <div class="caption text-center">
-                                <h1>Example headline.</h1>
-                                <div class="caption_button">
-                                    <input type="button" value="Lire plus" class="btn btn-secondary btn-lg">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row decale_bloc">
-            <div class ="offset-md-2 offset-lg-2 col-md-8 col-lg-8"  style="border-style: solid;">
-                <div class="row d-flex justify-content-around">
-                    <div class ="col-md-4 col-lg-4"  style="border-style: solid;">
-                        <img src="images/presentation.jpg" alt="Bootstrap" class="img-fluid">
-                    </div>
-                    <div class ="col-md-6 col-lg-6"  style="border-style: solid;">
-                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis.</p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-lg-12 button_catalog_bigtitle">
-                    <input type="button" value="Button" class="btn btn-secondary btn-lg">
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

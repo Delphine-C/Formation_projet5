@@ -20,7 +20,7 @@ class BlogPageController extends Controller
     public function blog(ArticleCRUD $CRUD)
     {
         $articles = $CRUD->getArticles();
-        //return $this->render('blog.html.twig', ['articles' => $articles]);
-        return $this->render('blog.html.twig');
+
+        return $this->render('blog.html.twig', ['articles' => $articles]);
     }
 }
