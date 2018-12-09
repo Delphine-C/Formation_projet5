@@ -250,6 +250,20 @@ button:hover {
     padding: 0 2em;
 }
 
+/* Forms*/
+input {
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+input, textarea {
+    width: 100%;
+    border: solid 1px #373737;
+    border-radius: 3px;
+    background-color: #FCFCFC;
+    padding-left: 10px;
+}
+
 /* BOTTOM PAGE */
 
 #pre-footer {
