@@ -251,6 +251,9 @@ button:hover {
     margin-top: 10em;
     color: #FFF;
 }
+#pre-footer h2, p {
+    color: #FCFCFC;
+}
 
 /* FOOTER */
 
