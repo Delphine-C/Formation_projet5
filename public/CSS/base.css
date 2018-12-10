@@ -218,12 +218,13 @@ img.ronde {
     border-radius: 50px;
 }
 
-img.about{
+img.about {
     float: left;
     margin-right: 30px;
     height: 200px;
-    width:200px;
+    width: 200px;
 }
+
 .social {
     height: 16px;
     width: 16px;
@@ -299,6 +300,18 @@ input, textarea {
     border-radius: 3px;
     background-color: #FCFCFC;
     padding-left: 10px;
+}
+
+/* Flash message*/
+
+.flash-notice {
+    color: #398F31;
+    background-color: #D9F7E1;
+    border-color: #BCF1C8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 /* BOTTOM PAGE */

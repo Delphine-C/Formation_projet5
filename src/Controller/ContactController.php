@@ -19,7 +19,7 @@ class ContactController extends Controller
     /**
      * @Route("/contact", name="contact_page")
      */
-    public function contact(Request $request)
+    public function contact(Request $request, \Swift_Mailer $mailer)
     {
         $contact = new ContactDTO();
         $formContact = $this
@@ -27,32 +27,27 @@ class ContactController extends Controller
             ->handleRequest($request);
 
         if ($formContact->isSubmitted() && $formContact->isValid()) {
-            $monMail = $this->container->getParameter('mail_address');
+            //$monMail = $this->container->getParameter('mail_address');
 
             $message = (new \Swift_Message("Cocorico Digital - Demande de devis"))
                 ->setFrom(['cocorico-digital@mail.com' => 'Site web Cocorico Digital'])
-                ->setTo($monMail)
+                ->setTo('corneil.delphine@gmail.com')
                 ->setBody(
                     $this->renderView(
-                        'contact.html.twig', [
+                        'mail/mailContact.html.twig', [
                             'contact' => $contact
                         ]
                     ),
                     'text/html'
                 );
 
-            try {
-                $this->get('mailer')->send($message);
-            } catch (\Exception $exception) {
-            }
+            $mailer->send($message);
 
             $this->addFlash('notice', "Votre mail a bien été envoyé.");
 
             //$this->addFlash('error', "Votre mail n'a pu être envoyé. Veuillez réessayer.");
 
-            return $this->render('contact.html.twig', [
-                'form' => $formContact->createView()
-            ]);
+            return $this->redirect($request->getUri());
         }
 
         return $this->render('contact.html.twig', [
