@@ -95,6 +95,14 @@ body {
     margin-top: 10%;
 }
 
+.center {
+    text-align: center;
+}
+
+.space {
+    margin-top: 2.5em;
+}
+
 /* Titles */
 
 h1 {
@@ -143,6 +151,10 @@ h5 {
     line-height: normal;
     letter-spacing: 0.15em;
     color: #373737;
+}
+
+img + h5 {
+    margin-top: 2em;
 }
 
 /* Paragraphs*/
@@ -212,6 +224,14 @@ img.h1 {
     display: inline-block;
 }
 
+.svg-padding {
+    margin-right: 15px;
+}
+
+.svg100 {
+    width: 100px;
+}
+
 /* Buttons */
 
 button {
@@ -248,6 +268,11 @@ button:hover {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     padding: 0 2em;
+}
+
+/* Tables */
+table {
+    margin: auto
 }
 
 /* Forms*/

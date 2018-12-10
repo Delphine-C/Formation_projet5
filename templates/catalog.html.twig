@@ -1,35 +1,47 @@
 {% extends "base.html.twig" %}
+
 {% block stylesheets %}
     <link href="{{ asset('CSS/catalog.css') }}" rel="stylesheet">
 {% endblock %}
-{% block body %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 col-lg-12" style="border-style: solid;">
-                <div class="row">
-                    <div class="col-sm-11 col-md-12 col-lg-5" style="border-style: solid;">
-                        <img src="images/presentation.jpg" alt="Bootstrap" class="img-fluid">
-                    </div>
-                    <div class="offset-lg-1 col-xs-11 col-md-12 col-lg-5" style="border-style: solid;">
-                        <h2>Subtitle</h2>
-                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis, siquid per inprudentiam gestum est remissurus ut mitis et clemens, participemque eum suae maiestatis adscisceret, futurum laborum quoque socium, quos Arctoae provinciae diu fessae poscebant.</p>
 
-                        <p>Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes annuos fructus, quae a primo ad ultimum solem se abunde iactitant possidere, ignorantes profecto maiores suos, per quos ita magnitudo Romana porrigitur, non divitiis eluxisse sed per bella saevissima, nec opibus nec victu nec indumentorum vilitate gregariis militibus discrepantes opposita cuncta superasse virtute.</p>
-                        <div class="col-md-12 col-lg-12 button_catalog_subtitle" style="border-style: solid;">
-                            <input type="button" value="Button" class="btn btn-secondary btn-lg">
-                        </div>
+{% block body %}
+    <div class="container-fluid page-content">
+        <header>
+            <div class="row justify-content-around">
+                <div class="col-lg-5 display-small">
+                    <img src="{{ asset('images/home-intro.jpg') }}" class="img-fluid ">
+                </div>
+                <div class="col-xs-12 col-lg-5 justify-content-around">
+                    <div class="row col-xs-6">
+                        <img src="{{ asset('images/logoH1/blog.svg') }}" class="h1">
+                        <h1>Nos services</h1>
+                    </div>
+                    <div class="row col-xs-6">
+                        <h2>A Subtitle</h2>
+                    </div>
+                    <div class="row">
+                        <p class="envaleur">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo felis
+                            turpis, sit amet rhoncus augue fringilla aliquam. Duis eleifend massa non quam molestie
+                            dictum.</p>
                     </div>
                 </div>
+            </div>
+        </header>
+
+        <div class="row">
+            <div class="row col-12 margin-auto">
+                <h4>Nos packs</h4>
             </div>
         </div>
         <div class="row d-flex justify-content-around">
-            <div class ="col-md-3 col-lg-3" style="border-style: solid;">
-                <div class="col-md-11 col-lg-11" style="border-style: solid;">
-                    <div class="col-md-12 col-lg-12">
-                        <h1>Big Title</h1>
+            <div class="col-md-4 col-lg-4">
+                <div class="col-md-12 col-lg-12 white">
+                    <div class="col-md-12 col-lg-12 center">
+                        <h1>Basic</h1>
+                        <h4>500€</h4>
                     </div>
                     <div class="row justify-content-lg-center">
-                        <div class="col-md-11 col-lg-11" style="border-style: solid;">
+                        <div class="col-md-12 col-lg-12">
                             <table>
                                 <tr>
                                     <td>Item One</td>
@@ -55,19 +67,62 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-12 button_catalog_bigtitle">
-                        <input type="button" value="Button" class="btn btn-secondary btn-lg">
+                    <div class="row justify-content-around">
+                        <a href="#">
+                            <button>Button</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <div class="col-md-12 col-lg-12 white">
+                    <div class="col-md-12 col-lg-12 center">
+                        <h1>Premium</h1>
+                        <h4>1000€</h4>
+                    </div>
+                    <div class="row justify-content-lg-center">
+                        <div class="col-md-12 col-lg-12">
+                            <table>
+                                <tr>
+                                    <td>Item One</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Two</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Three</td>
+                                </tr>
+                                <tr>
+                                    <td>Item One</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Two</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Three</td>
+                                </tr>
+                                <tr>
+                                    <td>Item One</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row justify-content-around">
+                        <a href="#">
+                            <button>Button</button>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class ="col-md-3 col-lg-3" style="border-style: solid;">
-                <div class="col-md-11 col-lg-11" style="border-style: solid;">
-                    <div class="col-md-12 col-lg-12">
-                        <h1>Big Title</h1>
+            <div class="col-md-4 col-lg-4">
+                <div class="col-md-12 col-lg-12 white">
+                    <div class="col-md-12 col-lg-12 center">
+                        <h1>Sur-mesure</h1>
+                        <h4>Sur devis</h4>
                     </div>
                     <div class="row justify-content-lg-center">
-                        <div class="col-md-11 col-lg-11" style="border-style: solid;">
+                        <div class="col-md-12 col-lg-12">
                             <table>
                                 <tr>
                                     <td>Item One</td>
@@ -93,101 +148,83 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-12 button_catalog_bigtitle">
-                        <input type="button" value="Button" class="btn btn-secondary btn-lg">
+                    <div class="row justify-content-around">
+                        <a href="#">
+                            <button>Button</button>
+                        </a>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="row block160">
+            <div class="col-12">
+                <h4>Notre démarche</h4>
             </div>
 
-            <div class ="col-md-3 col-lg-3" style="border-style: solid;">
-                <div class="col-md-11 col-lg-11" style="border-style: solid;">
-                    <div class="col-md-12 col-lg-12">
-                        <h1>Big Title</h1>
+            <div class="col-md-12 col-lg-12">
+                <div class="row d-flex justify-content-around">
+                    <div class="col-md-3 col-lg-3">
+                        <img src="{{ asset('images/catalog/1.packs-choice.svg') }}" alt="Bootstrap"
+                             class="rounded mx-auto d-block svg100">
+                        <h5>Vous choisissez</h5>
+                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis
+                            opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit
+                            vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet
+                            patruelis.</p>
                     </div>
-                    <div class="row justify-content-lg-center">
-                        <div class="col-md-11 col-lg-11" style="border-style: solid;">
-                            <table>
-                                <tr>
-                                    <td>Item One</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Two</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Three</td>
-                                </tr>
-                                <tr>
-                                    <td>Item One</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Two</td>
-                                </tr>
-                                <tr>
-                                    <td>Item Three</td>
-                                </tr>
-                                <tr>
-                                    <td>Item One</td>
-                                </tr>
-                            </table>
-                        </div>
+                    <div class="col-md-3 col-lg-3">
+                        <img src="{{ asset('images/catalog/2.discuss.svg') }}" alt="Bootstrap" class="rounded mx-auto d-block svg100">
+                        <h5>On discute avec vous</h5>
+                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis
+                            opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit
+                            vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet
+                            patruelis.</p>
                     </div>
-                    <div class="col-md-12 col-lg-12 button_catalog_bigtitle">
-                        <input type="button" value="Button" class="btn btn-secondary btn-lg">
+                    <div class="col-md-3 col-lg-3">
+                        <img src="{{ asset('images/catalog/3.plan.svg') }}" alt="Bootstrap" class="rounded mx-auto d-block svg100">
+                        <h5>On planifie avec vous</h5>
+                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis
+                            opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit
+                            vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet
+                            patruelis.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="offset-md-2 offset-lg-2 col-md-8 col-lg-8" style="border-style: solid;">
+        <div class="row space">
+            <div class="col-md-12 col-lg-12">
                 <div class="row d-flex justify-content-around">
-                    <div class ="col-md-3 col-lg-3 " style="border-style: solid;">
-                        <img src="images/discount.png" alt="Bootstrap" class="rounded mx-auto d-block" style="width: 150px;">
-                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis.</p>
+                    <div class="col-md-3 col-lg-3 ">
+                        <img src="{{ asset('images/catalog/4.design.svg') }}" alt="Bootstrap" class="rounded mx-auto d-block svg100">
+                        <h5>On design</h5>
+                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis
+                            opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit
+                            vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet
+                            patruelis.</p>
                     </div>
-                    <div class ="col-md-3 col-lg-3 " style="border-style: solid;">
-                        <img src="images/discount.png" alt="Bootstrap" class="rounded mx-auto d-block" style="width: 150px;">
-                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis.</p>
+                    <div class="col-md-3 col-lg-3">
+                        <img src="{{ asset('images/catalog/5.code.svg') }}" alt="Bootstrap" class="rounded mx-auto d-block svg100">
+                        <h5>On développe</h5>
+                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis
+                            opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit
+                            vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet
+                            patruelis.</p>
                     </div>
-                    <div class ="col-md-3 col-lg-3 " style="border-style: solid;">
-                        <img src="images/discount.png" alt="Bootstrap" class="rounded mx-auto d-block" style="width: 150px;">
-                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="offset-md-2 offset-lg-2 col-md-8 col-lg-8" style="border-style: solid;">
-                <div class="row d-flex justify-content-around">
-                    <div class ="col-md-3 col-lg-3 " style="border-style: solid;">
-                        <img src="images/discount.png" alt="Bootstrap" class="rounded mx-auto d-block" style="width: 150px;">
-                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis.</p>
-                    </div>
-                    <div class ="col-md-3 col-lg-3 " style="border-style: solid;">
-                        <img src="images/discount.png" alt="Bootstrap" class="rounded mx-auto d-block" style="width: 150px;">
-                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis.</p>
-                    </div>
-                    <div class ="col-md-3 col-lg-3 " style="border-style: solid;">
-                        <img src="images/discount.png" alt="Bootstrap" class="rounded mx-auto d-block" style="width: 150px;">
-                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis.</p>
+                    <div class="col-md-3 col-lg-3">
+                        <img src="{{ asset('images/catalog/6.maintient.svg') }}" alt="Bootstrap" class="rounded mx-auto d-block svg100">
+                        <h5>On maintient</h5>
+                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis
+                            opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit
+                            vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet
+                            patruelis.</p>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-12 button_catalog_bigtitle">
-                    <input type="button" value="Button" class="btn btn-secondary btn-lg">
-                </div>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center">
-            <div class ="col-md-5 col-lg-5"  style="border-style: solid;">
-                <div class="row d-flex justify-content-around">
-                    <div class ="col-md-5 col-lg-5"  style="border-style: solid;">
-                        <img src="images/presentation.jpg" alt="Bootstrap" class="img-fluid">
+                <div class="row d-flex justify-content-center space">
+                    <div class="row col-auto margin-auto">
+                        <img src="{{ asset('images/catalog/7.checked.svg') }}" class="svg-padding h1">
+                        <h4>Vous êtes satisfait</h4>
                     </div>
-                    <div class ="col-md-5 col-lg-5"  style="border-style: solid;">
-                        <p>Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis.</p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-lg-12 button_catalog_bigtitle">
-                    <input type="button" value="Button" class="btn btn-secondary btn-lg">
                 </div>
             </div>
         </div>
