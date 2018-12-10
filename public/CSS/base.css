@@ -212,6 +212,18 @@ a.link3 {
     border-radius: 8px;
 }
 
+img.ronde {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+img.about{
+    float: left;
+    margin-right: 30px;
+    height: 200px;
+    width:200px;
+}
 .social {
     height: 16px;
     width: 16px;
