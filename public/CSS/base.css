@@ -441,3 +441,8 @@ footer nav a:hover {
         padding-left: 0;
     }
 }
+@media screen and (max-width: 1282px) {
+    .nav-link {
+        margin-right: 15px;
+    }
+}
