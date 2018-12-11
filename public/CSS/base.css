@@ -88,9 +88,7 @@ body {
     border-top-right-radius: 5px;
 }
 
-.block-decal:nth-child(2n), .block-decal:nth-child(4n) {
-    top: 10%;
-}
+
 
 .block-decal:nth-child(3n), .block-decal:nth-child(4n) {
     margin-top: 10%;
@@ -303,7 +301,7 @@ input {
 
 input, textarea {
     width: 100%;
-    border: solid 1px rgba(0,0,0,0.5);
+    border: solid 1px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     background-color: #FCFCFC;
     padding-left: 10px;
@@ -374,9 +372,14 @@ footer nav a:hover {
 }
 
 /* MEDIA QUERIES */
+
 @media screen and (max-width: 500px) {
     .block-first {
-        margin-bottom: 1em!important;
+        margin-bottom: 1em !important;
+    }
+
+    .block-decal:nth-child(2n), .block-decal:nth-child(4n) {
+        top: 0!important;
     }
 }
 
@@ -384,6 +387,10 @@ footer nav a:hover {
     .block-first {
         height: 24em;
         margin-bottom: 16em;
+    }
+
+    .block-decal:nth-child(2n), .block-decal:nth-child(4n) {
+        top: 10%;
     }
 }
 
@@ -394,7 +401,6 @@ footer nav a:hover {
     }
 
     /* Navbar */
-
     .navbar {
         background: #FFF;
     }
@@ -418,7 +424,6 @@ footer nav a:hover {
     }
 
     /* Images */
-
     .svg {
         margin-top: 4em;
         margin-bottom: 1.5em;
