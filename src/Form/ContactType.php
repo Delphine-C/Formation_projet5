@@ -45,18 +45,18 @@ class ContactType extends AbstractType
                 'label' => false,
                 'attr' => [
                     'placeholder' => 'Adresse email'
-                    ]
+                ]
             ])
             ->add('phoneNumber', TelType::class, [
                 'label' => false,
                 'attr' => [
                     'placeholder' => 'Téléphone'
-                    ]
+                ]
             ])
             ->add('title', TextType::class, [
                 'label' => false,
                 'attr' => [
-                    'placeholder'=> 'Sujet',
+                    'placeholder' => 'Sujet',
                     'minLength' => 2,
                     'maxLength' => 100
                 ]
@@ -64,8 +64,9 @@ class ContactType extends AbstractType
             ->add('content', TextareaType::class, [
                 'label' => false,
                 'attr' => [
-                    'placeholder'=>'Entrez votre message ici...',
-                    'maxLength' => 400
+                    'placeholder' => 'Entrez votre message ici...',
+                    'maxLength' => 400,
+                    'rows' => 5
                 ]
             ]);
     }
