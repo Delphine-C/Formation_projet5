@@ -394,10 +394,6 @@ footer nav a:hover {
     .block-decal:nth-child(2n), .block-decal:nth-child(4n) {
         top: 0;
     }
-
-    .page-content {
-        width: auto;
-    }
 }
 
 @media screen and (max-width: 990px) {
@@ -405,7 +401,9 @@ footer nav a:hover {
         display: none;
         width: 20px;
     }
-
+    .page-content {
+        width: auto;
+    }
     /* Navbar */
     .navbar {
         background: #FFF;
