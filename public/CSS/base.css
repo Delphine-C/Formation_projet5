@@ -394,6 +394,9 @@ footer nav a:hover {
     .block-decal:nth-child(2n), .block-decal:nth-child(4n) {
         top: 0;
     }
+    .block-decal:nth-child(2n){
+        margin-top: 10%;
+    }
 }
 
 @media screen and (max-width: 990px) {
