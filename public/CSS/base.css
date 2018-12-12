@@ -88,8 +88,6 @@ body {
     border-top-right-radius: 5px;
 }
 
-
-
 .block-decal:nth-child(3n), .block-decal:nth-child(4n) {
     margin-top: 10%;
 }
@@ -373,13 +371,9 @@ footer nav a:hover {
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 500px) {
+@media handheld and (max-width: 500px) {
     .block-first {
         margin-bottom: 1em !important;
-    }
-
-    .block-decal:nth-child(2n), .block-decal:nth-child(4n) {
-        top: 0!important;
     }
 }
 
@@ -388,13 +382,25 @@ footer nav a:hover {
         height: 24em;
         margin-bottom: 16em;
     }
+}
 
+@media screen and (min-width: 768px) {
     .block-decal:nth-child(2n), .block-decal:nth-child(4n) {
         top: 10%;
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 767px) {
+    .block-decal:nth-child(2n), .block-decal:nth-child(4n) {
+        top: 0;
+    }
+
+    .page-content {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 990px) {
     .display_desktop {
         display: none;
         width: 20px;
@@ -430,7 +436,7 @@ footer nav a:hover {
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 991px) {
     .display_mobile {
         display: none;
         height: 200px;
@@ -441,6 +447,7 @@ footer nav a:hover {
         padding-left: 0;
     }
 }
+
 @media screen and (max-width: 1282px) {
     .nav-link {
         margin-right: 15px;
