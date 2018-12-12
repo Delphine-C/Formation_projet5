@@ -231,6 +231,8 @@ img.about {
 img.h1 {
     height: 30px;
     width: 30px;
+    margin-right: 15px;
+    margin-top: 8px;
     display: inline-block;
 }
 
