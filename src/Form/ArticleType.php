@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class ArticleType extends AbstractType
 {
@@ -17,9 +18,16 @@ class ArticleType extends AbstractType
             ->add('title', TextType::class, [
                 'label' => 'Titre'
             ])
-            ->add('content', TextareaType::class, [
-                'label' => 'Rédiger votre article'
-            ]);
+            ->add('content', TextareaType::class)
+            ->add('content', TextareaType::class, array(
+                'attr' => array('class' => 'ckeditor'),
+             'label'=>'Votre article',
+            ))
+            ->add('Ajouter', SubmitType::class, array(
+                'attr'=> array(
+                    'class'=>'btn btn-login float-right'
+                )
+            ));
     }
 
     public function configureOptions(OptionsResolver $resolver)
