@@ -80,7 +80,8 @@ body {
 
 .white {
     background: #FFF;
-    margin: 0.2em;
+    /*margin: 0.2em;*/
+    border: 1px solid #FFF;
 }
 
 .white p, h6, a {
