@@ -5,7 +5,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131010788-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-131010788-1');
@@ -24,7 +28,8 @@
             <!-- Logo -->
             <div class="row col-12 d-lg-none">
                 <div class="order-1 order-lg-0 col-auto col-10 col-lg-2 text-center text-lg-left" id="logo-nav">
-                    <img src="{{ asset('images/logo-small-color-svg.svg') }}" alt="Logo de cocorico agence digitale" width="115px">
+                    <a href="{{ path('home_page') }}"><img src="{{ asset('images/logo-small-color-svg.svg') }}"
+                                    alt="Logo de cocorico agence digitale" width="115px"></a>
                 </div>
                 <!-- Nav -->
                 <nav class=" order-0 col-md-1 col-1 navbar navbar-expand-lg navbar-light text-left ">
@@ -35,8 +40,10 @@
                     </button>
                 </nav>
             </div>
-            <div class="order-1 order-lg-0 col-auto col-10 col-lg-2 text-center text-lg-left d-none d-lg-inline-block" id="logo-nav">
-                <img src="{{ asset('images/logo-small-color-svg.svg') }}" alt="Logo de cocorico agence digitale" width="115px">
+            <div class="order-1 order-lg-0 col-auto col-10 col-lg-2 text-center text-lg-left d-none d-lg-inline-block"
+                 id="logo-nav">
+                <a href="{{ path('home_page') }}"><img src="{{ asset('images/logo-small-color-svg.svg') }}" alt="Logo de cocorico agence digitale"
+                                                       width="115px"></a>
             </div>
             <div class="order-lg-1 col-lg-8  col-4 pl-0 pr-0 " id="div-nav">
                 <nav class="navbar navbar-expand-lg navbar-light text-left ">
@@ -61,12 +68,14 @@
                                 <a class="nav-link" href="{{ path('contact_page') }}">Nous contacter</a>
                             </li>
                             <li class="nav-item d-lg-none">
-                                <a class="nav-link mr-0" href="#"><img src="{{ asset('images/social/linkedin-logo-bleu.svg') }}"
-                                                                       class="social"
-                                                                       alt="logo linkedin"></a>
-                                <a class="nav-link mr-0" href="#"><img src="{{ asset('images/social/facebook-logo-bleu.svg') }}"
-                                                                       class="social"
-                                                                       alt="logo facebook"></a>
+                                <a class="nav-link mr-0" href="#"><img
+                                            src="{{ asset('images/social/linkedin-logo-bleu.svg') }}"
+                                            class="social"
+                                            alt="logo linkedin"></a>
+                                <a class="nav-link mr-0" href="#"><img
+                                            src="{{ asset('images/social/facebook-logo-bleu.svg') }}"
+                                            class="social"
+                                            alt="logo facebook"></a>
                             </li>
                         </ul>
                     </div>
