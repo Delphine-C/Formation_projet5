@@ -29,7 +29,7 @@
 }
 
 .nav-link:hover {
-    color: #547D87!important;
+    color: #547D87 !important;
 }
 
 #nav > h5 > a, footer h5, #copyright, .nav-link {
@@ -357,13 +357,22 @@ nav a {
     color: #FFF;
 }
 
-footer nav a:hover {
+footer nav a:hover, .tel:hover {
     text-decoration: none;
     color: #68C1DD;
 }
 
 .br {
     margin-bottom: 20px;
+}
+
+.tel {
+    text-decoration: none;
+    color: #FFF;
+}
+
+footer > div {
+    padding-left: 20px !important;
 }
 
 /* MEDIA QUERIES */
