@@ -28,6 +28,10 @@
     padding-top: 29px;
 }
 
+.nav-link:hover {
+    color: #547D87!important;
+}
+
 #nav > h5 > a, footer h5, #copyright, .nav-link {
     color: #68C1DD !important;
 }
@@ -267,9 +271,9 @@ button:not(.navbar-toggler) {
 }
 
 button:not(.navbar-toggler):hover {
-    background-image:linear-gradient(to right, #68C1DD 0%, #68C1DD 100%);
-    color:#373737;
-    font-weight:bold;
+    background-image: linear-gradient(to right, #68C1DD 0%, #68C1DD 100%);
+    color: #373737;
+    font-weight: bold;
 }
 
 button.navbar-toggler {
@@ -355,6 +359,7 @@ nav a {
 
 footer nav a:hover {
     text-decoration: none;
+    color: #68C1DD;
 }
 
 .br {
