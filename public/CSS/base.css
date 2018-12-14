@@ -244,7 +244,6 @@ img.h1 {
     width: 100px;
 }
 
-
 /* Buttons */
 
 button:not(.navbar-toggler) {
@@ -258,29 +257,19 @@ button:not(.navbar-toggler) {
     letter-spacing: 0.09em;
     text-transform: uppercase;
     color: #FCFCFC;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 20);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     padding: 0 2em;
     border-width: 0;
     margin-top: 3.5em;
+    cursor: pointer;
 }
 
 button:not(.navbar-toggler):hover {
-    background-color: #68C1DD !important;
-    color: #373737;
-    border-radius: 8px;
-    height: 50px;
-    min-width: 130px;
-    font-family: "Nunito", sans-serif;
-    font-weight: bold;
-    font-size: 0.875em;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 20);
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    padding: 0 2em;
+    background-image:linear-gradient(to right, #68C1DD 0%, #68C1DD 100%);
+    color:#373737;
+    font-weight:bold;
 }
 
 button.navbar-toggler {
@@ -397,7 +386,8 @@ footer nav a:hover {
     .block-decal:nth-child(2n), .block-decal:nth-child(4n) {
         top: 0;
     }
-    .block-decal:nth-child(2n){
+
+    .block-decal:nth-child(2n) {
         margin-top: 10%;
     }
 }
@@ -407,9 +397,11 @@ footer nav a:hover {
         display: none;
         width: 20px;
     }
+
     .page-content {
         width: auto;
     }
+
     /* Navbar */
     .navbar {
         background: #FFF;
@@ -461,54 +453,57 @@ footer nav a:hover {
 }
 
 @media screen and (min-width: 200px) {
-    .background_article{
+    .background_article {
         background-image: url("../images/article-fili-578.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        filter:alpha(opacity=50);
+        filter: alpha(opacity=50);
         opacity: 0.2;
-        -moz-opacity:0.5;
+        -moz-opacity: 0.5;
         padding-top: 15em;
         position: relative;
-        bottom:150px;
+        bottom: 150px;
     }
-    .title_article{
+
+    .title_article {
         position: relative;
         bottom: 500px;
         height: 10px;
         margin-bottom: 0px;
     }
-    .title_article h2{
+
+    .title_article h2 {
         margin-bottom: 0px;
     }
 
 }
+
 @media screen and (min-width: 760px) {
-    .background_article{
+    .background_article {
         background-image: url("../images/article-fili-990.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        filter:alpha(opacity=50);
+        filter: alpha(opacity=50);
         opacity: 0.2;
-        -moz-opacity:0.5;
+        -moz-opacity: 0.5;
         padding-top: 25em;
         position: relative;
-        bottom:150px;
+        bottom: 150px;
     }
 
 }
 
 @media screen and (min-width: 991px) {
-    .background_article{
+    .background_article {
         background-image: url("../images/article-fili-1980.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        filter:alpha(opacity=50);
+        filter: alpha(opacity=50);
         opacity: 0.2;
-        -moz-opacity:0.5;
+        -moz-opacity: 0.5;
         padding-top: 40em;
         position: relative;
-        bottom:150px;
+        bottom: 150px;
         margin-right: 0;
     }
 
