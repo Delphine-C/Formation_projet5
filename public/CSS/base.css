@@ -427,7 +427,7 @@ footer > div {
     .title_article h1, h2{
         font-size: 1.2em;
     }
-    img{
+    .content-article img{
         max-width: 100% !important;
         height: auto !important;
     }
