@@ -57,8 +57,18 @@ body {
 
 /* Blocks */
 
+.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .container-fluid header {
     margin-bottom: 8em;
+}
+
+.row{
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 
 .margin-auto {
@@ -421,10 +431,7 @@ footer > div {
         max-width: 100% !important;
         height: auto !important;
     }
-    .background_article{
-        max-width: 100% !important;
 
-    }
 }
 
 @media screen and (max-width: 990px) {
