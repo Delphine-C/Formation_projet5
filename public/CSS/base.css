@@ -502,7 +502,7 @@ footer > div {
         filter: alpha(opacity=50);
         opacity: 0.2;
         -moz-opacity: 0.5;
-        padding-top: 15em;
+        padding-top: 350px;
         position: relative;
         bottom: 150px;
     }
