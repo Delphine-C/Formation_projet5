@@ -13,29 +13,54 @@
 <body>
 <header>
     <!-- Nav -->
-    <div class="row">
-        <div class="col-lg-2">
-            <img src="#">
-        </div>
-        <div  class="col-lg-8">
-            <nav id="nav">
-                <ul>
-                    <li><a href="{{ path('dashboard') }}">Accueil</a></li>
-                    <li><a href="{{ path('articles') }}">Articles</a></li>
-                    <li><a href="{{ path('compte', {'id': app.user.id}) }}">Compte</a></li>
-                    {% if is_granted('ROLE_ADMIN') %}
-                        <li><a href="{{ path('comptes') }}">Admin comptes</a></li>
-                    {% endif %}
-                    <li><a href="{{ path('logout') }}">Deconexion</a></li>
-                </ul>
-
+    <div class="row d-flex align-items-start " id="header-main">
+        <!-- Logo -->
+        <div class="row col-12 d-lg-none">
+            <div class="order-1 order-lg-0 col-auto col-10 col-lg-2 text-center text-lg-left" id="logo-nav">
+                <a href="{{ path('home_page') }}"><img src="{{ asset('images/logo-small-color-svg.svg') }}"
+                                                       alt="Logo de cocorico agence digitale" width="115px"></a>
+            </div>
+            <!-- Nav -->
+            <nav class=" order-0 col-md-1 col-1 navbar navbar-expand-lg navbar-light text-left ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </nav>
         </div>
-        <div class="col-lg-2">
-            <p>logo</p>
+        <div class="order-1 order-lg-0 col-auto col-10 col-lg-2 text-center text-lg-left d-none d-lg-inline-block"
+             id="logo-nav">
+            <a href="{{ path('home_page') }}"><img src="{{ asset('images/logo-small-color-svg.svg') }}" alt="Logo de cocorico agence digitale"
+                                                   width="115px"></a>
         </div>
-
+        <div class="row order-lg-1 col-lg-8 col-12 pl-0 pr-0" id="div-nav">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto col-12 ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ path('dashboard') }}">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ path('articles') }}">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ path('compte', {'id': app.user.id}) }}">Compte</a>
+                        </li>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{ path('comptes') }}">Admin comptes</a>
+                            </li>
+                        {% endif %}
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ path('logout') }}">Deconexion</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
+
 </header>
 {% block body %}{% endblock %}
 

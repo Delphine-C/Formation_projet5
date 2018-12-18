@@ -20,7 +20,9 @@
 p
 {
     font-family: "Arial";
+    word-wrap: break-word;
 }
+
 h5
 {
     font-weight: bold;
@@ -51,7 +53,6 @@ h5
 }
 
 .container_other_article
-
 {
     padding: 20px 50px 20px;
     background:#fff;

@@ -31,15 +31,15 @@
 				<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 container_own_article">
                     {% for article in own_articles %}
 						<div class="row d-flex justify-content-between title_article">
-							<div class="col-md-2 col-lg-2">
+							<div class="col-md-8 col-lg-8">
 								<h5>{{ article.title }}</h5>
 							</div>
 							<div class="col-md-2 col-lg-2">
 								<p>{{ article.date|date('d-m-Y') }}</p>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-md-12 col-lg-12 content_article">
+						<div class="row content_article">
+							<div class="col-md-12 col-lg-12">
 								<p>{{ article.content|slice(0, 300) ~ '...'  }}</p>
 							</div>
 						</div>
@@ -63,7 +63,7 @@
 				<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 container_other_article ">
                     {% for article in other_articles %}
 						<div class="row d-flex justify-content-between title_article">
-							<div class="col-md-2 col-lg-2">
+							<div class="col-md-8 col-lg-8">
 								<h5>{{ article.title }}</h5>
 							</div>
 							<div class="col-md-2 col-lg-2">
