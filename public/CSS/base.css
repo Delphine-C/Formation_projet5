@@ -411,6 +411,12 @@ footer > div {
     .block-decal:nth-child(2n) {
         margin-top: 10%;
     }
+    .title_article h1{
+        margin-top: 150px;
+    }
+    .title_article h1, h2{
+        font-size: 1.2em;
+    }
 }
 
 @media screen and (max-width: 990px) {
