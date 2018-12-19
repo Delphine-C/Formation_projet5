@@ -43,7 +43,7 @@ class ContactController extends Controller
 
             $mailer->send($message);
 
-            $this->addFlash('notice', "Votre mail a bien été envoyé.");
+            $this->addFlash('notice', "COCORICO, message bien reçu ! Nous revenons vers vous au plus vite.");
 
             //$this->addFlash('error', "Votre mail n'a pu être envoyé. Veuillez réessayer.");
 
