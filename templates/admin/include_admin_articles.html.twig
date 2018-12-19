@@ -16,9 +16,15 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-end ">
-                <input type="button" value="Lire" class="btn btn-primary button">
-                <input type="button" value="Editer" class="btn btn-light button">
-                <input type="button" value="Supprimer" class="btn btn-danger button">
+                <a href="{{ path('article_page', {'id': article.id}) }}">
+                    <button class="btn btn-primary button">Lire</button>
+                </a>
+                <a href="{{ path('update_article', {'id': article.id}) }}">
+                    <button class="btn btn-light button">Editer</button>
+                </a>
+                <a href="{{ path('delete_article', {'id': article.id}) }}">
+                    <button class="btn btn-danger button">Supprimer</button>
+                </a>
             </div>
         {% endfor %}
     {% endif %}
