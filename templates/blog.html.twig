@@ -30,7 +30,7 @@
             <div class="row d-flex justify-content-around">
                 {% for article in articles %}
                     <div class="col-lg-5 col-md-5 col-sm-7 col-10 no-padding shadow-sm p-0 mb-0 bg-white rounded white block-decal thumbnail">
-                        <img src="{{ asset('images/home/projet1.jpg') }}" class="img-fluid" alt="" height="180"
+                        <img src="{{ asset(article.image) }}" class="img-fluid" alt="" height="180"
                              width="100%">
                         <div class="col-12 text-right">
                             <h7 class="font-weight-bold">{{ article.category }}</h7>
