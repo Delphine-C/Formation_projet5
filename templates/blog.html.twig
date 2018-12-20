@@ -38,7 +38,7 @@
 
                         <h5>Ecrit par {{ article.author.firstname }} le {{ article.date|date('d.m.Y') }}</h5>
                         <h6>{{ article.title }}</h6>
-                        <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
+                        <p>{{ article.content|slice(0, 60) ~ '...' }}</p>
                         <a href="{{ path('article_page', {'id': article.id}) }}" class="link1">Lire l'article</a>
                     </div>
                 {% endfor %}
