@@ -45,7 +45,9 @@
 						</div>
 						<div class="row text-right">
 							<div class="col-md-12 col-lg-12 button">
-								<input type="button" value="Editer article" class="btn btn-secondary btn-lg">
+								<a href="{{ path('update_article', {'id': article.id}) }}">
+									<button class="btn btn-secondary">Editer article</button>
+								</a>
 							</div>
 						</div>
                     {% endfor %}
@@ -60,10 +62,10 @@
 				<h3>Les derniers articles publiés :</h3>
 			</div>
 			<div class="row">
-				<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 container_other_article ">
+				<div class="offset-md-1 offset-lg-1 col-md-10 col-lg-10 h-auto container_other_article ">
                     {% for article in other_articles %}
 						<div class="row d-flex justify-content-between title_article">
-							<div class="col-md-8 col-lg-8">
+							<div class="col-12 col-md-8 col-lg-8">
 								<h5>{{ article.title }}</h5>
 							</div>
 							<div class="col-md-2 col-lg-2">
@@ -71,18 +73,20 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-12 col-lg-12">
+							<div class="col-12">
 								<p>{{ article.author.firstname }} {{ article.author.lastname }}</p>
 							</div>
 						</div>
 						<div class="row content_article">
-							<div class="col-md-12 col-lg-12">
+							<div class="col-12">
 								<p>{{ article.content|slice(0, 300) ~ '...'  }}</p>
 							</div>
 						</div>
 						<div class="row text-right">
-							<div class="col-md-12 col-lg-12 button">
-								<input type="button" value="Lire article" class="btn btn-secondary btn-lg">
+							<div class="col-12 button">
+								<a href="{{ path('article_page', {'id': article.id}) }}">
+									<button class="btn btn-secondary">Lire article</button>
+								</a>
 							</div>
 						</div>
                     {% endfor %}
