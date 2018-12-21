@@ -18,16 +18,19 @@ class DeleteArticleController extends Controller
     /**
      * @Route("/supprimer-article/{id}",name="delete_article")
      */
-    public function deleteArticle($id, ArticleCRUD $articleCRUD,Userlogin $userlogin)
+    public function deleteArticle($id, ArticleCRUD $articleCRUD, Userlogin $userlogin)
     {
         // if user is not login
         $user = $this->getUser();
         $userlogin->testLoggedInUser($user);
 
         // if user is not an admin
+        $article = $articleCRUD->getArticle($id);
+        $authorArticle = $article->getAuthor()->getId();
         $role = $this->getUser()->getAccount();
 
-        if($role === "ROLE_ADMIN"){
+        // if article is not by user
+        if ($user->getId() === $authorArticle | $role === "ROLE_ADMIN") {
             $articleCRUD->deleteArticle($id);
         }
 
