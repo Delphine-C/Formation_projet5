@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="row col-12 justify-content-around margin-auto">
-                <a href="#">
+                <a href="{{ 'catalogue'}}">
                     <button>Button</button>
                 </a>
             </div>
@@ -133,11 +133,11 @@
                     <h4>Nos clients</h4>
                 </div>
                 <div class="col-lg-4 no-padding shadow-sm p-0 mb-0 bg-white rounded white d-none d-lg-block">
-                    <img src="{{ asset('images/home/projet1.jpg') }}" class="img-fluid" alt="">
-                    <p>Type de projet</p>
-                    <h6>Titre h6</h6>
-                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
-                    <a href="#" class="link1">Voir le projet</a>
+                    <img src="{{ asset('images/home/lenormant_home.jpg') }}" class="img-fluid" alt="">
+                    <p>Création site</p>
+                    <h6>Groupe Lenormant</h6>
+                    <p>Nous avons participé à la visibilité digital d'un groupe familiale</p>
+                    <a href={{ 'project/project_lenormant' }} class="link1">Voir le projet</a>
                 </div>
                 <div class="col-lg-4 no-padding shadow-sm p-0 mb-0 bg-white rounded white d-none d-lg-block">
                     <img src="{{ asset('images/home/projet2.jpg') }}" class="img-fluid" alt="">
