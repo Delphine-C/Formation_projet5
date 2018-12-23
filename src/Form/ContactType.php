@@ -16,6 +16,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
+use Captcha\Bundle\CaptchaBundle\Form\Type\CaptchaType;
 
 class ContactType extends AbstractType
 {
@@ -68,7 +69,10 @@ class ContactType extends AbstractType
                     'maxLength' => 400,
                     'rows' => 5
                 ]
-            ]);
+            ])
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'Captach_contact'
+            ));
     }
 
     /**

@@ -9,10 +9,11 @@
 namespace App\DTO;
 
 use Symfony\Component\Validator\Constraints as Assert;
+use Captcha\Bundle\CaptchaBundle\Validator\Constraints as CaptchaAssert;
 
 class ContactDTO
 {
-    /*
+    /**
      * @Assert\Length(
      *     min=2,
      *     max=40,
@@ -22,7 +23,7 @@ class ContactDTO
      */
     public $firstname;
 
-    /*
+    /**
     * @Assert\Length(
     *     min=2,
     *     max=40,
@@ -32,14 +33,14 @@ class ContactDTO
     */
     public $lastname;
 
-    /*
+    /**
      * @Assert\Email(message="L'adresse email n'est pas valide.")
      */
     public $email;
 
     public $phoneNumber;
 
-    /*
+    /**
      * @Assert\Length(
      *     max=100,
      *     maxMessage = "La longueur de la chaîne de caractères est trop longue."
@@ -47,11 +48,29 @@ class ContactDTO
      */
     public $title;
 
-    /*
+    /**
      * @Assert\Length(
      *     max=400,
      *     maxMessage = "Le message est trop long. Soyez concis."
      * )
      */
     public $content;
+
+    /**
+     * @CaptchaAssert\ValidCaptcha(
+     *      message = "CAPTCHA validation failed, try again."
+     * )
+     */
+    protected $captchaCode;
+
+    public function getCaptchaCode()
+    {
+        return $this->captchaCode;
+    }
+    public function setCaptchaCode($captchaCode)
+    {
+        $this->captchaCode = $captchaCode;
+    }
+
+
 }

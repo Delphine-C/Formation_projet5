@@ -30,8 +30,8 @@ class ContactController extends Controller
             //$monMail = $this->container->getParameter('mail_address');
 
             $message = (new \Swift_Message("Cocorico Digital - Demande de devis"))
-                ->setFrom(['cocorico-digital@mail.com' => 'Site web Cocorico Digital'])
-                ->setTo('corneil.delphine@gmail.com')
+                ->setFrom(['benoit.lefevre22@gmail.com' => 'Site web Cocorico Digital'])
+                ->setTo('benoit.lefevre22@gmail.com')
                 ->setBody(
                     $this->renderView(
                         'mail/mailContact.html.twig', [
