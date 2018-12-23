@@ -1,5 +1,7 @@
 {% extends "base.html.twig" %}
 
+{% block title %}Nos clients{% endblock %}
+
 {% block stylesheets %}
     <link href="{{ asset('CSS/references.css') }}" rel="stylesheet">
 {% endblock %}
@@ -29,11 +31,11 @@
         <div class="row block">
             <div class="row d-flex justify-content-around display-small">
                 <div class="col-lg-5 col-md-5 col-sm-7 col-10 no-padding shadow-sm p-0 mb-0 bg-white rounded white block-decal thumbnail">
-                    <img src="{{ asset('images/home/projet1.jpg') }}" class="img-fluid" alt="" height="180" width="100%">
-                    <p>Type de projet</p>
-                    <h6>Titre h6</h6>
-                    <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p>
-                    <a href="#" class="link1">Voir le projet</a>
+                    <img src="{{ asset('images/home/lenormant_home.jpg') }}"  class="img-fluid" alt="" height="180" width="100%">
+                    <p>Création site</p>
+                    <h6>Groupe Lenormant</h6>
+                    <p>Nous avons participé à la visibilité digital d'un groupe familiale</p>
+                    <a href={{ 'project/project_lenormant' }} class="link1">Voir le projet</a>
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-7 col-10 no-padding shadow-sm p-0 mb-0 bg-white rounded white block-decal thumbnail">
                     <img src="{{ asset('images/home/projet2.jpg') }}" class="img-fluid" alt="" height="180" width="100%">

@@ -21,7 +21,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class ComptesController extends Controller
 {
     /**
-     * @Route("/comptes", name="comptes")
+     * @Route("admin/comptes", name="comptes")
      */
     public function compte(Request $request, CompteCRUD $compteCrud, UserPasswordEncoderInterface $encoder)
     {
