@@ -375,7 +375,13 @@ nav a {
     color: #FFF;
 }
 
-footer nav a:hover, .tel:hover {
+footer #link_blog a {
+    text-decoration: none;
+    color: #FFF;
+    margin:0 !important;
+}
+
+footer nav a:hover, .tel:hover, #link_blog a:hover {
     text-decoration: none;
     color: #68C1DD;
 }
