@@ -16,8 +16,8 @@
                         <p class="envaleur">Cocorico digital c’est avant tout une seule et même ambition : répondre à vos besoins dans les meilleurs délais et de la manière la plus adaptée ! Après tout, ne dit-on pas que notre agence est “au coeur de vos besoins” ?</p>
                     </div>
                     <div class="row justify-content-around">
-                        <a>
-                            <button class="mt-0">Button</button>
+                        <a href="{{ 'references' }}">
+                            <button class="mt-0">Nos clients</button>
                         </a>
                     </div>
                 </div>
@@ -30,8 +30,8 @@
         <div class="row">
             <div class="offset-1 col-10 offset-lg-0 col-lg-5">
                 <h4>L'équipe</h4>
-                <div class="row justify-content-left justify-content-lg-center">
-                    <div class="col-7 col-sm-7 col-md-7 col-lg-4 text-right">
+                <div class="row space justify-content-left">
+                    <div class="col-7 col-sm-7 col-md-7 col-lg-4 text-right pr-0">
                         <img src="{{ asset('images/home-intro.jpg') }}" alt="Bootstrap" class="img-fluid ronde">
                     </div>
                     <div class="col-4">
@@ -39,8 +39,8 @@
                         <p>Développeuse Full-stack</p>
                     </div>
                 </div>
-                <div class="row space justify-content-left justify-content-lg-center">
-                    <div class="col-7 col-sm-7 col-md-7 col-lg-4 text-right ">
+                <div class="row space justify-content-left">
+                    <div class="col-7 col-sm-7 col-md-7 col-lg-4 text-right pr-0 ">
                         <img src="{{ asset('images/home-intro.jpg') }}" alt="Bootstrap" class="img-fluid ronde">
                     </div>
                     <div class="col-4">
@@ -48,17 +48,17 @@
                         <p>Directeur artistique</p>
                     </div>
                 </div>
-                <div class="row space justify-content-left justify-content-lg-center">
-                    <div class="col-7 col-sm-7 col-md-7 col-lg-4 text-right">
+                <div class="row space justify-content-left">
+                    <div class="col-7 col-sm-7 col-md-7 col-lg-4 text-right pr-0">
                         <img src="{{ asset('images/home-intro.jpg') }}" alt="Bootstrap" class="img-fluid ronde">
                     </div>
                     <div class="col-4">
                         <p>Benoit</p>
-                        <p>Développeur Back-end</p>
+                        <p>Développeur Full-stack</p>
                     </div>
                 </div>
-                <div class="row space justify-content-left justify-content-lg-center">
-                    <div class="col-7 col-sm-7 col-md-7 col-lg-4 text-right">
+                <div class="row space justify-content-left">
+                    <div class="col-7 col-sm-7 col-md-7 col-lg-4 text-right pr-0">
                         <img src="{{ asset('images/home-intro.jpg') }}" alt="Bootstrap" class="img-fluid  ronde">
                     </div>
                     <div class="col-4">
@@ -66,8 +66,8 @@
                         <p>Directrice Marketing</p>
                     </div>
                 </div>
-                <div class="row space justify-content-left justify-content-lg-center">
-                    <div class="col-7 col-sm-7 col-md-7 col-lg-4 text-right">
+                <div class="row space justify-content-left">
+                    <div class="col-7 col-sm-7 col-md-7 col-lg-4 text-right pr-0">
                         <img src="{{ asset('images/home-intro.jpg') }}" alt="Bootstrap" class="img-fluid ronde">
                     </div>
                     <div class="col-4">
@@ -77,14 +77,21 @@
                 </div>
             </div>
             <div class="col-0 col-lg-7">
-                <h4 class="d-none d-lg-inline-flex">Titre</h4>
-                <p class="d-none d-lg-inline-flex">L’agence Cocorico digital est née d’un constat : seul 66 % des TPE/PME françaises ont un site internet. C’est pourquoi nous aidons aujourd’hui les professionnels à être visible sur internet en alliant nos compétences. Développement, design, marketing : voici la recette magique pour répondre à vos besoins ! </p>
-                <img src="{{ asset('images/home-intro.jpg') }}" alt="Bootstrap" class="img-fluid about d-none d-lg-inline-flex" id="left">
-                <p class="d-none d-lg-inline-flex">Notre équipe complémentaire vous accompagne tout au long de votre projet et surtout : vous écoute. En plus de faire du 100% français (aucun service n’est externalisé), nous misons tout sur la proximité avec le client. Chez Cocorico digital, nous prenons le temps de vous écouter, de vous comprendre et nous vous proposons une solution sans perdre de vue la dimension humaine.
-                    100% transparent, 100% français. N’attendez plus que les poules aient des dents pour réaliser vos projets (même les plus fous) !
-                </p>
-                <div class="row justify-content-center d-none d-lg-inline-flex">
-                    <button>Button</button>
+                <h4 class="d-none d-lg-inline-flex">Nos origines</h4>
+                <p class="d-none d-lg-inline-flex pull-left text-justify">L’agence Cocorico digital est née d’un constat : seul 66 % des TPE/PME françaises ont un site internet. C’est pourquoi nous aidons aujourd’hui les professionnels à être visible sur internet en alliant nos compétences. Développement, design, marketing : voici la recette magique pour répondre à vos besoins ! </p>
+
+                <img src="{{ asset('images/home-intro.jpg') }}" alt="Bootstrap" class="img-fluid about d-none d-lg-inline-flex pull-left" id="left">
+                <div class="col-12 pr-0">
+                    <div class="row">
+                        <p class="d-none d-lg-inline-flex text-justify">Notre équipe complémentaire vous accompagne tout au long de votre projet et surtout : vous écoute. En plus de faire du 100% français (aucun service n’est externalisé), nous misons tout sur la proximité avec le client. Chez Cocorico digital, nous prenons le temps de vous écouter, de vous comprendre et nous vous proposons une solution sans perdre de vue la dimension humaine.
+                            100% transparent, 100% français. N’attendez plus que les poules aient des dents pour réaliser vos projets !
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 row justify-content-center d-none d-lg-inline-flex">
+                    <a href="{{ 'contact' }}">
+                        <button>Nous contacter</button>
+                    </a>
                 </div>
             </div>
         </div>
