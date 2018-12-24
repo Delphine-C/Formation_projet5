@@ -40,7 +40,7 @@
 						</div>
 						<div class="row content_article">
 							<div class="col-md-12 col-lg-12">
-								<p>{{ article.content|slice(0, 300) ~ '...'  }}</p>
+								<p>{{ article.content|striptags|slice(0, 300)|raw }}...</p>
 							</div>
 						</div>
 						<div class="row text-right">
@@ -79,7 +79,7 @@
 						</div>
 						<div class="row content_article">
 							<div class="col-12">
-								<p>{{ article.content|slice(0, 300) ~ '...'  }}</p>
+								<p>{{ article.content|striptags|slice(0, 300)|raw }}...</p>
 							</div>
 						</div>
 						<div class="row text-right">
