@@ -501,7 +501,7 @@ footer > div {
 
 }
 
-@media screen and (min-width: 200px) {
+@media screen and (min-width: 320px) {
     .background_article {
         background-image: url("../images/article-fili-578.jpg");
         background-repeat: no-repeat;
@@ -516,7 +516,7 @@ footer > div {
 
     .title_article {
         position: relative;
-        bottom: 500px;
+        bottom: 630px;
         height: 10px;
         margin-bottom: 0px;
     }
@@ -539,6 +539,12 @@ footer > div {
         position: relative;
         bottom: 150px;
     }
+    .title_article {
+        position: relative;
+        bottom: 500px;
+        height: 10px;
+        margin-bottom: 0px;
+    }
 
 }
 
@@ -554,6 +560,13 @@ footer > div {
         position: relative;
         bottom: 150px;
         margin-right: 0;
+    }
+
+    .title_article {
+        position: relative;
+        bottom: 630px;
+        height: 10px;
+        margin-bottom: 0px;
     }
 
 }
