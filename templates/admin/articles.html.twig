@@ -45,7 +45,7 @@
                     <h3 class="text-center">Vos articles</h3>
                     {% for article in own_articles %}
                         <div class="row d-flex justify-content-between title_article">
-                            <div class="col-md-2 col-lg-2">
+                            <div class="col-md-5 col-lg-8">
                                 <h5>{{ article.title }}</h5>
                             </div>
                             <div class="col-md-2 col-lg-2">
@@ -54,7 +54,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 col-lg-12 content_article">
-                                <p>{{ article.content|slice(0, 300) ~ '...' }}</p>
+                                <p>{{ article.content|striptags|slice(0, 300)|raw }}...</p>
                             </div>
                         </div>
                         <div class="row d-flex justify-content-end ">
