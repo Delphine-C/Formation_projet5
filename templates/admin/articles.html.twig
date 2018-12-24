@@ -28,6 +28,7 @@
                         <button>Nouvel article</button>
                     </a>
                 </div>
+                {% if is_granted('ROLE_ADMIN') %}
                 <div class="col-lg-auto d-flex align-items-center">
                     <label class="" for="inlineFormCustomSelect">Affichage</label>
                     <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="displayArticle">
@@ -35,6 +36,7 @@
                         <option value="admin">Admin</option>
                     </select>
                 </div>
+                {% endif %}
             </div>
         </div>
         <div class="row d-flex justify-content-center">
