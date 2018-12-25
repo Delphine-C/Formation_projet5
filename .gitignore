@@ -4,6 +4,7 @@
 /public/bundles/
 /vendor/
 /var
+/public/.htaccess
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
