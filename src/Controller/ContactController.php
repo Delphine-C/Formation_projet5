@@ -27,27 +27,42 @@ class ContactController extends Controller
             ->handleRequest($request);
 
         if ($formContact->isSubmitted() && $formContact->isValid()) {
-            //$monMail = $this->container->getParameter('mail_address');
+            // Test recaptcha
+            $secret = getenv('API_SECRET'); // votre clé privée
+            $response = $_POST['g-recaptcha-response'];// Paramètre renvoyé par le recaptcha
+            $remoteip = $_SERVER['REMOTE_ADDR'];// On récupère l'IP de l'utilisateur
+            $api_url = "https://www.google.com/recaptcha/api/siteverify?secret="
+                . $secret
+                . "&response=" . $response
+                . "&remoteip=" . $remoteip;
 
-            $message = (new \Swift_Message("Cocorico Digital - Demande de devis"))
-                ->setFrom(['benoit.lefevre22@gmail.com' => 'Site web Cocorico Digital'])
-                ->setTo('benoit.lefevre22@gmail.com')
-                ->setBody(
-                    $this->renderView(
-                        'mail/mailContact.html.twig', [
-                            'contact' => $contact
-                        ]
-                    ),
-                    'text/html'
-                );
+            $decode = json_decode(file_get_contents($api_url), true);
 
-            $mailer->send($message);
+            if ($decode['success'] == true) {
+                $monMail = getenv('mail_address');
 
-            $this->addFlash('notice', "COCORICO, message bien reçu ! Nous revenons vers vous au plus vite.");
+                $message = (new \Swift_Message("Cocorico Digital - Demande de devis"))
+                    ->setFrom(['cocorico-digital@mail.com' => 'Site web Cocorico Digital'])
+                    ->setTo($monMail)
+                    ->setBody(
+                        $this->renderView(
+                            'mail/mailContact.html.twig', [
+                                'contact' => $contact
+                            ]
+                        ),
+                        'text/html'
+                    );
 
-            //$this->addFlash('error', "Votre mail n'a pu être envoyé. Veuillez réessayer.");
+                $mailer->send($message);
 
-            return $this->redirect($request->getUri());
+                $this->addFlash('notice', "COCORICO, message bien reçu ! Nous revenons vers vous au plus vite.");
+
+                return $this->redirect($request->getUri());
+            } else {
+                $this->addFlash('error', "Votre mail n'a pu être envoyé. Veuillez réessayer.");
+
+                return $this->redirect($request->getUri());
+            }
         }
 
         return $this->render('contact.html.twig', [
